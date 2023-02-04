@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Ubuntu, sans-serif;
+  background-color: #f7f5eb;
+}
+a {
+  text-decoration: none;
+  color: #2e2e2e;
+}
+.button {
+  font-size: 16px;
+  padding: 12px 32px;
+  border-radius: 190px;
+  cursor: pointer;
+  border: solid 2px #2e2e2e;
+  transform: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+.header {
+  position: relative;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 15px;
+  width: 100%;
+  position: absolute;
+}
+
+.menu {
+  display: flex;
+  gap: 22px;
+  font-size: 18px;
+  list-style-type: none;
+  color: #2e2e2e;
+  cursor: pointer;
+}
+
+.sign-buttons {
+  display: flex;
+  gap: 24px;
+}
+.active {
+  color: #659bb3;
+}
+
+.border-button {
+  color: #2e2e2e;
+  background-color: transparent;
+}
+
+.filled-button {
+  background-color: #2e2e2e;
+  color: white;
+}
+
+.hero-section {
+  height: 812px;
+  background-image: url("/img/hero-section.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-section-content {
+  position: relative;
+  top: 20%;
+  left: 15%;
+  width: 45%;
+}
+
+.small-title {
+  display: flex;
+  font-size: 18px;
+  color: #a0c3d2;
+  font-weight: 300;
+  gap: 5px;
+  margin-left: 20px;
+}
+
+.hero-title {
+  text-transform: uppercase;
+  font-size: 37px;
+  color: #062d3e;
+  font-weight: 300;
+}
+.hero-title span {
+  color: #ce8989;
+}
+.about-us {
+  background-image: url("/img/about-bg.png");
+  height: 516px;
+}
+.promo-button {
+  margin-top: 20px;
+  border: none;
+  padding: 16px 32px;
+  background-color: #ce8989;
+  color: white;
+  font-size: 20x;
+  text-transform: uppercase;
+}
