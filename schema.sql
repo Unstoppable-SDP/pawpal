@@ -17,23 +17,23 @@ CREATE TABLE personal_info (
 
 CREATE TABLE pets_owner (
 	owner_id INT PRIMARY KEY,
-	prsonal_info INT,
+	personal_info INT,
 	password VARCHAR(25),
-	CONSTRAINT personal_info
+	CONSTRAINT owner_info
 		FOREIGN KEY (personal_info) 
-		REFERENCES personal_info(personal_info)
+		REFERENCES personal_info(persnal_id)
 		ON DELETE CASCADE
 );
 
 CREATE TABLE pets_sitter (
 	sitter_id INT PRIMARY KEY,
-    prsonal_info INT,
+    personal_info INT,
 	image VARCHAR(100),
 	daily_price DOUBLE,
 	rate INT,
 	CONSTRAINT sitter_info
-		FOREIGN KEY (prsonal_info) 
-		REFERENCES personal_info(prsonal_info)
+		FOREIGN KEY (personal_info) 
+		REFERENCES personal_info(persnal_id)
 		ON DELETE CASCADE
 );
 
