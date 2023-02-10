@@ -101,7 +101,7 @@ form input[type="submit"] {
     text-align: center;
 }
 
-a {
+.signup a {
     color: #000000;
     font-weight: 900; 
     text-decoration: none;
