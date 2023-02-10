@@ -28,7 +28,7 @@ CREATE TABLE pets_owner (
 CREATE TABLE pets_sitter (
 	sitter_id INT PRIMARY KEY AUTO_INCREMENT,
     personal_info INT,
-	image VARCHAR(100),
+	image VARCHAR(300),
 	daily_price DOUBLE,
 	rate INT,
 	CONSTRAINT sitter_info
@@ -80,4 +80,5 @@ CREATE TABLE booking(
         CONSTRAINT quan
 				check(quantity < 7)
 );
+
 
