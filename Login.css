@@ -31,7 +31,7 @@ body {
 }
 
 .user {
-    background-image: url("./a_t.png");
+    background-image: url("/img/a_t.png");
     background-size: cover;
     width: 100px;
     height: 100px;
