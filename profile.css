@@ -14,7 +14,7 @@ body {
 .profileImg {
     position: absolute;
     left: 583px;
-    top: 131px;
+    top: 80px;
 }
 
 .profiletitle {
@@ -67,7 +67,7 @@ input {
     width: 270px;
     height: 38px;
     left: 143px;
-    top: 400px;
+    top: 420px;
 
     font-family: 'Ubuntu';
     font-style: normal;
