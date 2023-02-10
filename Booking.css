@@ -31,12 +31,12 @@ body {
 }
 
 .Booking {
-    background-image: url("./d_t.png");
+    background-image: url("/img/d_t.png");
     background-size: cover;
     width: 500px;
     height: 250px;
     position: absolute;
-    Top: -200px;
+    Top: -205px;
     Left: 210px;
 }
 
