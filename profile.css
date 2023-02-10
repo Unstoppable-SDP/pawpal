@@ -5,11 +5,10 @@
 .box {
     position: relative;
 }
-.background {
-    position: relative;
-    width: 1440px;
-    height: 3000px;
-    background: #F7F5EB;
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: #F7F5EB;
 }
 
 .profileImg {
