@@ -3,20 +3,20 @@ CREATE SCHEMA pawpal;
 USE pawpal;
 
 CREATE TABLE personal_info (
-	persnal_id INT PRIMARY KEY,
+	persnal_id INT PRIMARY KEY AUTO_INCREMENT,
 	email VARCHAR(50) UNIQUE,
 	Fname VARCHAR(25),
 	Lname VARCHAR(25),
 	Gender VARCHAR(6),
 	Birthdate DATE,
-	Age INT,
+	Age INT AS (year(CURRENT_TIMESTAMP) - year(Birthdate)),
 	city VARCHAR(20),
 	street VARCHAR(20),
 	hn INT
 );
 
 CREATE TABLE pets_owner (
-	owner_id INT PRIMARY KEY,
+	owner_id INT PRIMARY KEY AUTO_INCREMENT,
 	personal_info INT,
 	password VARCHAR(25),
 	CONSTRAINT owner_info
@@ -26,7 +26,7 @@ CREATE TABLE pets_owner (
 );
 
 CREATE TABLE pets_sitter (
-	sitter_id INT PRIMARY KEY,
+	sitter_id INT PRIMARY KEY AUTO_INCREMENT,
     personal_info INT,
 	image VARCHAR(100),
 	daily_price DOUBLE,
@@ -62,7 +62,7 @@ CREATE TABLE Pets (
 );
 
 CREATE TABLE booking(
-	booking_id INT,
+	booking_id INT unique,
     pet_id INT NOT NULL,
     sitter_id INT NOT NULL,
     start_date DATE,
@@ -80,3 +80,4 @@ CREATE TABLE booking(
         CONSTRAINT quan
 				check(quantity < 7)
 );
+
