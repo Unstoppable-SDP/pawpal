@@ -232,3 +232,127 @@ Values ("Cat",10);
 
 Insert into pets_type
 Values ("Dog",10);
+
+Insert into personal_info(email,Fname,Lname,Gender,Birthdate,city,street,hn)
+Values ("Hussa@gmail.com", "Hussa", "Alrashed", "Female", "1994-05-05", "Jeddah","Alsamer", 4535);
+
+Insert into pets_sitter(image,daily_price,rate)
+Values("https://cdn.theconversation.com/avatars/1158778/width238/file-20200921-18-dodyrw.jpg",80,5);
+
+UPDATE pets_sitter 
+SET personal_info = (SELECT persnal_id 
+					FROM  personal_info 
+					ORDER BY persnal_id DESC LIMIT 1)
+where sitter_id = (SELECT   sitter_id
+					FROM  pets_sitter 
+					ORDER BY sitter_id DESC LIMIT 1);
+                    
+Insert into pets_type
+Values ("Fish",11);
+
+Insert into pets_type
+Values ("Turtle",11);
+
+Insert into pets_type
+Values ("Hamster",11);
+
+Insert into personal_info(email,Fname,Lname,Gender,Birthdate,city,street,hn)
+Values ("Bashayer@gmail.com", "Bashayer", "Alrashed", "Female", "1990-04-01", "Riyadh","Prince Sultan Road", 4550);
+
+Insert into pets_sitter(image,daily_price,rate)
+Values("https://i0.wp.com/www.lexis.ae/wp-content/uploads/2021/03/Dr.-Bashayer-Al-Majed-scaled.jpg?fit=2560%2C1849&ssl=1",85,4);
+
+UPDATE pets_sitter 
+SET personal_info = (SELECT persnal_id 
+					FROM  personal_info 
+					ORDER BY persnal_id DESC LIMIT 1)
+where sitter_id = (SELECT   sitter_id
+					FROM  pets_sitter 
+					ORDER BY sitter_id DESC LIMIT 1);
+                    
+Insert into pets_type
+Values ("Dog",12);
+
+Insert into pets_type
+Values ("Cat",12);
+
+Insert into pets_type
+Values ("Rabbit",12);
+
+Insert into pets_type
+Values ("Monkey",12);
+
+Insert into personal_info(email,Fname,Lname,Gender,Birthdate,city,street,hn)
+Values ("Bader7@gmail.com", "Bader", "Almushiqah", "Male", "2000-07-07", "Buraidah","Prince Mohammed Road", 4490);
+
+Insert into pets_sitter(image,daily_price,rate)
+Values("https://assets-global.website-files.com/620ff6c426544faf00000d23/620ff6c426544f0dfc000f17_Yazeed%20Alsayari.jpg",87,4);
+
+UPDATE pets_sitter 
+SET personal_info = (SELECT persnal_id 
+					FROM  personal_info 
+					ORDER BY persnal_id DESC LIMIT 1)
+where sitter_id = (SELECT   sitter_id
+					FROM  pets_sitter 
+					ORDER BY sitter_id DESC LIMIT 1);
+                    
+Insert into pets_type
+Values ("Dog",13);
+
+Insert into pets_type
+Values ("Cat",13);
+
+Insert into pets_type
+Values ("Rabbit",13);
+
+Insert into pets_type
+Values ("Birds",13);
+
+Insert into personal_info(email,Fname,Lname,Gender,Birthdate,city,street,hn)
+Values ("Ibrahim8@gmail.com", "Ibrahim", "Alsulami", "Male", "1991-10-10", "Dhahran","King Khalid Road", 1545);
+
+Insert into pets_sitter(image,daily_price,rate)
+Values("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiPHDeVd6Jf3hNZ3Low3ee_trmFZGy6L5fuH4NoQY6qDmdkyMsD2-Mq9t0Pqln1UKlG5Q&usqp=CAU",78,3);
+
+UPDATE pets_sitter 
+SET personal_info = (SELECT persnal_id 
+					FROM  personal_info 
+					ORDER BY persnal_id DESC LIMIT 1)
+where sitter_id = (SELECT   sitter_id
+					FROM  pets_sitter 
+					ORDER BY sitter_id DESC LIMIT 1);
+                    
+Insert into pets_type
+Values ("Bearded dragons",14);
+
+Insert into pets_type
+Values ("Guinea pig",14);
+
+Insert into pets_type
+Values ("Ferret",14);
+
+Insert into personal_info(email,Fname,Lname,Gender,Birthdate,city,street,hn)
+Values ("Wafa6@gmail.com", "Wafa", "Balbaid", "Female", "1996-06-30", "Dammam","King Fahad Road", 1878);
+
+Insert into pets_sitter(image,daily_price,rate)
+Values("https://media.istockphoto.com/id/495700282/photo/beautiful-arab-woman-in-smiling-portrait-outdoor.jpg?s=612x612&w=0&k=20&c=CAFJqZk56ZGfEGcipGvcQUOOCI9QpNJeDd_yKhjy7Jg=",84,4);
+
+UPDATE pets_sitter 
+SET personal_info = (SELECT persnal_id 
+					FROM  personal_info 
+					ORDER BY persnal_id DESC LIMIT 1)
+where sitter_id = (SELECT   sitter_id
+					FROM  pets_sitter 
+					ORDER BY sitter_id DESC LIMIT 1);
+                    
+Insert into pets_type
+Values ("Birds",15);
+
+Insert into pets_type
+Values ("Rabbit",15);
+
+Insert into pets_type
+Values ("Fish",15);
+
+Insert into pets_type
+Values ("Hamster",15);
