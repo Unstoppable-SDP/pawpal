@@ -7,28 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign in </title>
     <link rel="stylesheet" href="Login.css" />
+    <link rel="stylesheet" href="home.css" />
 </head>
 
-<body class="flex">
-    <div class="container">
-        <div class="user"></div>
-        <form>
-            <div class="input">
-                <label for ="email"></label>
-                <input type="email" required id="email" name="email" placeholder="Email"/>
-                
+
+<body >
+    <head>
+        <div class="header">
+          <div class="header-content">
+            <img src="img/Logo.png" />
+            <ul class="menu">
+              <li><a class="active" href="#">About</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Reviews</a></li>
+            </ul>
+            <div class="sign-buttons">
+              <button class="button border-button">Sign Up</button>
+              <button class="button filled-button">Sign In</button>
             </div>
-            <div class="input box">
-                <label for="password"></label>
-                <input type="password" required id="password" name="password" placeholder="Password"/>
+          </div>
+        </div>
+      </head>
+    <div class="flex">
+        <div class="container">
+            <div class="user"></div>
+            <form>
+                <div class="input">
+                    <label for ="email"></label>
+                    <input type="email" required id="email" name="email" placeholder="Email"/>
+                    
+                </div>
+                <div class="input box">
+                    <label for="password"></label>
+                    <input type="password" required id="password" name="password" placeholder="Password"/>
+                </div>
+                <input class="L_btn" type="submit" value="Sign in" />
+            </form method="get">
+            <div class="div">
+                <div class="line"></div>
+                <div class="signup">Don't Have an account? <a href="#">Sign up</a></div>
             </div>
-            <input class="L_btn" type="submit" value="Sign in" />
-        </form method="get">
-        <div class="div">
-            <div class="line"></div>
-            <div class="signup">Don't Have an account? <a href="#">Sign up</a></div>
         </div>
     </div>
+    
 </body>
 
 </html>

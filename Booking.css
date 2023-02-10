@@ -16,6 +16,7 @@ body {
 .flex {
     display: flex;
     align-items: center;
+    padding-top: 200px;
     justify-content: center;
 }
 
@@ -26,7 +27,7 @@ body {
     border-radius: 5px;
     background-color: #F7F5EB;
     padding: 30px 40px 20px 80px;
-    box-shadow: 10px 10px 20px #A0C3D2;
+    box-shadow: 10px 10px 20px rgba(160, 195, 210, 0.505);
 
 }
 
@@ -43,7 +44,7 @@ body {
 .Avatar{
     background-size: cover;
     position: absolute;
-    Top: -120px;
+    Top: -160px;
     Left: 990px;
 }
 
@@ -74,6 +75,7 @@ form input[type="submit"] {
 .input-container{
     display:flex;
 }
+
 .input {
     margin: 20px 30px;
     position: relative;
