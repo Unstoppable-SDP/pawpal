@@ -356,3 +356,4 @@ Values ("Fish",15);
 
 Insert into pets_type
 Values ("Hamster",15);
+#End
