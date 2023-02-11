@@ -251,6 +251,7 @@ input {
     height: 196px;
     left: 115px;
     top: 1154px;
+    resize: none;
     background: #F7F5EB;
     border: 1px solid #4F4F4F;
     border-radius: 50px;
@@ -272,6 +273,7 @@ input {
     height: 87.26px;
     left: 1000.24px;
     top: 1220px;
+    cursor: pointer;
 
     background: #F7F5EB;
     border: 1px solid #4F4F4F;

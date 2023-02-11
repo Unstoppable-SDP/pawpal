@@ -465,6 +465,7 @@ input {
     position: absolute;
     width: 500px;
     height: 196px;
+    resize: none;
     left: 118px;
     top: 1740px;
     background: #F7F5EB;
@@ -584,6 +585,7 @@ input {
     height: 87.26px;
     left: 1054.24px;
     top: 1800px;
+    cursor: pointer;
 
     background: #F7F5EB;
     border: 1px solid #4F4F4F;
@@ -774,3 +776,27 @@ input {
     color: #4F4F4F;
 }
 
+.SignOut {
+    position: absolute;
+    width: 346px;
+    height: 103px;
+    left: 547px;
+    top: 2800px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    background: #A0C3D2;
+    border-radius: 100px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    color: #F7F5EB;
+    border: #F7F5EB;
+}
+
+.SignOut:hover {
+    transform: scale(1.1);
+}
