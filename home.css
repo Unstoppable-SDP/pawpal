@@ -17,7 +17,7 @@ a {
   border-radius: 190px;
   cursor: pointer;
   border: solid 2px #2e2e2e;
-  transform: all 0.2s ease-in-out;
+  transform: all 0.3s ease-in-out;
 }
 
 .button:hover {
@@ -80,22 +80,24 @@ a {
   display: flex;
   font-size: 18px;
   color: #a0c3d2;
-  font-weight: 300;
   gap: 5px;
   margin-left: 20px;
+}
+.small-title h4 {
+  font-weight: 500;
 }
 
 .hero-title {
   text-transform: uppercase;
   font-size: 37px;
   color: #062d3e;
-  font-weight: 300;
 }
 .hero-title span {
   color: #ce8989;
 }
 .about-us {
   background-image: url("/img/about-bg.png");
+  background-size: cover;
   height: 516px;
 }
 .promo-button {
@@ -106,4 +108,97 @@ a {
   color: white;
   font-size: 20x;
   text-transform: uppercase;
+}
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  gap: 36px;
+
+  position: relative;
+  left: 40%;
+  padding: 60px 0;
+}
+.home-title {
+  text-transform: uppercase;
+  font-size: 80px;
+  font-weight: 500;
+}
+
+.about-title {
+  color: #f7f5eb;
+}
+.about-container p {
+  color: white;
+  font-size: 19px;
+  line-height: 3;
+  width: 600px;
+  text-align: justify;
+  word-wrap: break-word;
+}
+
+.service_secttion {
+  background-image: url("/img/service_bg.png");
+  background-size: cover;
+  height: 700px;
+  padding: 80px 140px;
+}
+
+.service_title {
+  color: #ce8989;
+}
+.box {
+  height: 420px;
+  padding: 50px 30px;
+  color: #2f5768;
+}
+
+.sitter-box {
+  background-image: url("/img/pets_sitter.png");
+  background-size: cover;
+  width: 412px;
+}
+
+.icon {
+  width: 90px;
+  height: 90px;
+}
+
+.box_title {
+  padding: 10px 0;
+}
+
+.box {
+  line-height: 2;
+}
+.explore-button {
+  background-color: #2f5768;
+  border: none;
+  margin-top: 20px;
+  color: white;
+}
+.walking-box {
+  background-image: url("/img/dog-walking.png");
+  background-size: cover;
+  width: 442px;
+}
+
+.services-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding-top: 30px;
+}
+
+.soon-button {
+  margin-top: 20px;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 12px 32px;
+  border-radius: 190px;
+  cursor: pointer;
+  border: solid 2px #2f5768;
+  color: #2f5768;
+  cursor: auto;
 }
