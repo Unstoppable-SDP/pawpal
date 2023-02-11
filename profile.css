@@ -605,6 +605,8 @@ input {
     height: 103px;
     left: 547px;
     top: 2050px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
 
     background: #A0C3D2;
     border-radius: 100px;

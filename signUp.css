@@ -293,6 +293,7 @@ input {
     height: 113px;
     left: 529px;
     top: 1471px;
+    cursor: pointer;
 
     background: #A0C3D2;
     border: #A0C3D2;
@@ -304,6 +305,8 @@ input {
     line-height: 38px;
     letter-spacing: 0.01em;
     color: #F7F5EB;
+    transition: all .2s ease-in-out;
+
 }
 
 .createButton:hover {
