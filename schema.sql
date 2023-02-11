@@ -28,9 +28,9 @@ CREATE TABLE pets_owner (
 CREATE TABLE pets_sitter (
 	sitter_id INT PRIMARY KEY AUTO_INCREMENT,
     personal_info INT,
-	image VARCHAR(100),
-	daily_price DOUBLE,
-	rate INT,
+    image VARCHAR(300),
+    daily_price DOUBLE,
+    rate INT,
 	CONSTRAINT sitter_info
 		FOREIGN KEY (personal_info) 
 		REFERENCES personal_info(persnal_id)

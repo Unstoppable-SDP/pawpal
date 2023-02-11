@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="icon" href="img/smallLogo.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signUp.css">
+    <link rel="stylesheet" href="home.css" />
+</head>
+
+<body>
+    <head>
+        <div class="header">
+          <div class="header-content">
+            <img src="img/Logo.png" />
+            <ul class="menu">
+              <li><a class="active" href="#">About</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Reviews</a></li>
+            </ul>
+            <div class="sign-buttons">
+              <button class="button border-button">Sign Up</button>
+              <button class="button filled-button">Sign In</button>
+            </div>
+          </div>
+        </div>
+      </head>
+    <h4 class = "title1">Personal Info</h4>
+
+    <form action="/url" method="GET">
+        <input type="text" placeholder="FName" class="textbox1">
+        <input type="text" placeholder="LName" class = "textbox2">
+    </form>
+
+    <form action="/url" method="GET">
+        <input type="text" placeholder="Gender" class = "textbox3">
+        <input type="text" placeholder="Email" class = "textbox4">
+    </form>
+
+    <form action="/url" method="GET">
+        <input type="date" placeholder="Birthdate" class = "textbox5">
+        <input type="password" placeholder="Password" class = "textbox6">
+    </form>
+
+    <form action="/url" method="GET">
+        <input type="text" placeholder="City" class = "textbox7">
+        <input type="text" placeholder="Street" class = "textbox8">
+    </form>
+
+    <form action="/url" method="GET">
+        <input type="text" placeholder="House Number" class = "textbox9">
+    </form>
+
+        <h4 class="title2">Pets</h4>
+    
+    <form action="/url" method="GET">
+        <input type="text" placeholder="Name" class = "textboxforPets1">
+        <label for="Type"></label>
+        <select name="Type" id="Type" class="textboxforPets2">
+            <option value="Dog" selected class = "textop">Dog</option>
+            <option value="Cat" class = "textop">Cat</option>
+            <option value="Cat" class = "textop">Turtle</option>
+            <option value="Hamster" class = "textop">Hamster</option>
+            <option value="Cat" class = "textop">Rabbit</option>
+            <option value="Cat" class = "textop">Guinea pig</option>
+            <option value="Parrot" class = "textop">Birds</option>
+            <option value="Cat" class = "textop">Ferret</option>
+            <option value="Cat" class = "textop">Fish</option>
+            <option value="Cat" class = "textop">Bearded dragons</option>
+            <option value="Cat" class = "textop">Monkey</option>
+            <option value="Cat" class = "textop">Amphibians</option>
+        </select>
+    </form>
+
+    <form action="/url" method="GET">
+        <input type="number" placeholder="Age" class = "textboxforPets3">
+        <input type="text" placeholder="Gender" class = "textboxforPets4">
+    </form>
+
+    <form action="/url" method="GET">
+        <textarea type ="text" placeholder="Requirements" class="textboxforPets5"></textarea>
+        <h6 class="title3">Add Pet</h6>
+        <button class="buttonforpet">+</button>
+    </form>
+
+    <form action="/url" method="GET">
+        <button class = "createButton">Create User</button>
+    </form>
+</body>
+
+</html>

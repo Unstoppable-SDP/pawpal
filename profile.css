@@ -1,0 +1,774 @@
+* {
+    font-family: 'Ubuntu';
+    font-style: normal;
+}
+.box {
+    position: relative;
+}
+body {
+    width: 100%;
+    height: 400vh;
+    background-color: #F7F5EB;
+}
+
+.profileImg {
+    position: absolute;
+    left: 583px;
+    top: 80px;
+}
+
+.profiletitle {
+    position: absolute;
+    width: 119px;
+    height: 38px;
+    left: 663px;
+    top: 360px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+input {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+    padding-right:0.8em;
+    padding-left:0.8em;
+    letter-spacing: 0.01em;
+    color: #4F4F4F;
+}
+
+
+.textop {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+    padding:0.8em;
+    /* identical to box height, or 95% */
+    letter-spacing: 0.01em;
+    color: #4F4F4F;
+}
+
+.title1 {
+    position: absolute;
+    width: 270px;
+    height: 38px;
+    left: 143px;
+    top: 420px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.title2 {
+    position: absolute;
+    width: 77px;
+    height: 38px;
+    left: 143px;
+    top: 1310px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.title3 {
+    position: absolute;
+    width: 230px;
+    height: 36px;
+    left: 810px;
+    top: 1730px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 38px;
+    /* or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.title4 {
+    position: absolute;
+    width: 164px;
+    height: 38px;
+    left: 155px;
+    top: 2220px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.textboxinfo1 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 118px;
+    top: 550px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxinfo2 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 766px;
+    top: 550px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxinfo3 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 118px;
+    top: 700px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxinfo4 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 766px;
+    top: 700px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxinfo5 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 118px;
+    top: 850px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxinfo6 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 766px;
+    top: 850px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxinfo7 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 118px;
+    top: 1000px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxinfo8 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 766px;
+    top: 1000px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxinfo9 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 118px;
+    top: 1150px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.labelinfo1 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 143px;
+    top: 510px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelinfo2 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 791px;
+    top: 510px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelinfo3 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 143px;
+    top: 660px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelinfo4 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 791px;
+    top: 660px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelinfo5 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 143px;
+    top: 810px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelinfo6 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 791px;
+    top: 810px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelinfo7 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 143px;
+    top: 960px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelinfo8 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 791px;
+    top: 960px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelinfo9 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 143px;
+    top: 1110px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.textboxpets1 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 118px;
+    top: 1440px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxpets2 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 766px;
+    top: 1440px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+    padding-right:0.8em;
+    padding-left:0.8em;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    color: #4F4F4F;
+}
+
+.textboxpets3 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 118px;
+    top: 1590px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxpets4 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 766px;
+    top: 1590px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxpets5 {
+    position: absolute;
+    width: 500px;
+    height: 196px;
+    left: 118px;
+    top: 1740px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 50px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    color: #4F4F4F;
+    padding-right:0.8em;
+    padding-left:0.8em;
+}
+
+.labelpets1 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 143px;
+    top: 1400px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelpets2 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 791px;
+    top: 1400px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelpets3 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 143px;
+    top: 1550px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelpets4 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 791px;
+    top: 1550px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelpets5 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 143px;
+    top: 1700px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.buttonpets {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 85.13px;
+    height: 87.26px;
+    left: 1054.24px;
+    top: 1800px;
+
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    transform: rotate(88.65deg);
+    border-radius: 50%;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    color: #4F4F4F;
+}
+
+.updatebutton {
+    position: absolute;
+    width: 346px;
+    height: 103px;
+    left: 547px;
+    top: 2050px;
+
+    background: #A0C3D2;
+    border-radius: 100px;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    color: #F7F5EB;
+    border: #F7F5EB;
+}
+
+.updatebutton:hover {
+    transform: scale(1.1);
+}
+
+.textboxbooking1 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 118px;
+    top: 2373px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxbooking2 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 766px;
+    top: 2373px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxbooking3 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 118px;
+    top: 2525px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxbooking4 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 766px;
+    top: 2525px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.textboxbooking5 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 118px;
+    top: 2677px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
+.labelbooking1 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 143px;
+    top: 2333px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelbooking2 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 791px;
+    top: 2333px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelbooking3 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 143px;
+    top: 2485px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelbooking4 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 791px;
+    top: 2485px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
+.labelbooking5 {
+    position: absolute;
+    width: 242px;
+    height: 38px;
+    left: 143px;
+    top: 2637px;
+
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 40;
+    font-size: 30px;
+    line-height: 38px;
+    /* identical to box height, or 95% */
+
+    letter-spacing: 0.01em;
+
+    color: #4F4F4F;
+}
+
