@@ -12,6 +12,36 @@ body {
     height: 100vh;
     background-color: #F7F5EB;
 }
+a {
+    text-decoration: none;
+    color: #2e2e2e;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .header {
+    position: relative;
+  }
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 15px;
+    width: 100%;
+    position: absolute;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 22px;
+    font-size: 18px;
+    list-style-type: none;
+    color: #2e2e2e;
+    cursor: pointer;
+  }
+  .active {
+    color: #659bb3;
+  }
 
 .flex {
     display: flex;
