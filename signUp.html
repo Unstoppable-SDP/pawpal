@@ -30,36 +30,36 @@
       </head>
     <h4 class = "title1">Personal Info</h4>
 
-    <form action="/url" method="GET">
-        <input type="text" placeholder="FName" class="textbox1">
-        <input type="text" placeholder="LName" class = "textbox2">
-    </form>
+    <form action="signUp.php" method="POST">
+        <input type="text" placeholder="FName" class="textbox1" required>
+        <input type="text" placeholder="LName" class = "textbox2" required>
+    
 
-    <form action="/url" method="GET">
-        <input type="text" placeholder="Gender" class = "textbox3">
-        <input type="text" placeholder="Email" class = "textbox4">
-    </form>
+    
+        <input type="text" placeholder="Gender" class = "textbox3" required>
+        <input type="email" placeholder="Email" class = "textbox4" required>
+    
 
-    <form action="/url" method="GET">
-        <input type="date" placeholder="Birthdate" class = "textbox5">
-        <input type="password" placeholder="Password" class = "textbox6">
-    </form>
+    
+        <input type="date" placeholder="Birthdate" class = "textbox5" required>
+        <input type="password" placeholder="Password" class = "textbox6" required>
+    
 
-    <form action="/url" method="GET">
-        <input type="text" placeholder="City" class = "textbox7">
-        <input type="text" placeholder="Street" class = "textbox8">
-    </form>
+    
+        <input type="text" placeholder="City" class = "textbox7" required>
+        <input type="text" placeholder="Street" class = "textbox8" required>
+    
 
-    <form action="/url" method="GET">
-        <input type="text" placeholder="House Number" class = "textbox9">
-    </form>
+    
+        <input type="text" placeholder="House Number" class = "textbox9" required>
+    
 
         <h4 class="title2">Pets</h4>
     
-    <form action="/url" method="GET">
-        <input type="text" placeholder="Name" class = "textboxforPets1">
+    
+        <input type="text" placeholder="Name" class = "textboxforPets1" required>
         <label for="Type"></label>
-        <select name="Type" id="Type" class="textboxforPets2">
+        <select name="Type" required id="Type" class="textboxforPets2">
             <option value="Dog" selected class = "textop">Dog</option>
             <option value="Cat" class = "textop">Cat</option>
             <option value="Cat" class = "textop">Turtle</option>
@@ -73,20 +73,20 @@
             <option value="Cat" class = "textop">Monkey</option>
             <option value="Cat" class = "textop">Amphibians</option>
         </select>
-    </form>
+    
 
-    <form action="/url" method="GET">
-        <input type="number" placeholder="Age" class = "textboxforPets3">
-        <input type="text" placeholder="Gender" class = "textboxforPets4">
-    </form>
+    
+        <input type="number" placeholder="Age" class = "textboxforPets3" required>
+        <input type="text" placeholder="Gender" class = "textboxforPets4" required>
+    
 
-    <form action="/url" method="GET">
+    
         <textarea type ="text" placeholder="Requirements" class="textboxforPets5"></textarea>
         <h6 class="title3">Add Pet</h6>
         <button class="buttonforpet">+</button>
-    </form>
+    
 
-    <form action="/url" method="GET">
+    
         <button class = "createButton">Create User</button>
     </form>
 </body>
