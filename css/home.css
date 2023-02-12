@@ -11,9 +11,6 @@ a {
   text-decoration: none;
   color: #2e2e2e;
 }
-a:hover {
-  text-decoration: underline;
-}
 .button {
   font-size: 16px;
   padding: 12px 32px;
@@ -67,7 +64,7 @@ a:hover {
 
 .hero-section {
   height: 812px;
-  background-image: url("/img/hero-section.png");
+  background-image: url("../img/hero-section.png");
   background-position: center;
   background-size: cover;
 }
@@ -99,7 +96,7 @@ a:hover {
   color: #ce8989;
 }
 .about-us {
-  background-image: url("/img/about-bg.png");
+  background-image: url("../img/about-bg.png");
   background-size: cover;
   height: 516px;
 }
@@ -142,7 +139,7 @@ a:hover {
 }
 
 .service_secttion {
-  background-image: url("/img/service_bg.png");
+  background-image: url("../img/service_bg.png");
   background-size: cover;
   height: 700px;
   padding: 80px 140px;
@@ -158,7 +155,7 @@ a:hover {
 }
 
 .sitter-box {
-  background-image: url("/img/pets_sitter.png");
+  background-image: url("../img/pets_sitter.png");
   background-size: cover;
   width: 412px;
 }
@@ -182,7 +179,7 @@ a:hover {
   color: white;
 }
 .walking-box {
-  background-image: url("/img/dog-walking.png");
+  background-image: url("../img/dog-walking.png");
   background-size: cover;
   width: 442px;
 }
@@ -204,4 +201,67 @@ a:hover {
   border: solid 2px #2f5768;
   color: #2f5768;
   cursor: auto;
+}
+
+.review-section {
+  background-image: url("../img/review_background.png");
+  background-size: cover;
+  height: 910px;
+}
+.review-section {
+  margin-top: 100px;
+}
+.review-title {
+  text-align: center;
+  color: #ce8989;
+}
+.review-container {
+  display: flex;
+  margin: 0 200px;
+  align-items: center;
+}
+.reviewer-image {
+  width: 600px;
+}
+
+.customer-review {
+  color: #062d3e;
+}
+
+h4 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+.review-body {
+  background-image: url("../img/zigzag-bg.png");
+  background-position: cover;
+  height: 330px;
+  width: 475px;
+  padding: 27px;
+  background-repeat: no-repeat;
+}
+.review-body p {
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+footer {
+  background-image: url("../img/footer-background.png");
+  background-position: cover;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px 0 100px;
+}
+
+.footer-logo {
+  width: 220px;
+}
+.menu-footer .menu {
+  padding: 0 200px;
+}
+.menu-footer .menu li a {
+  color: white;
 }
