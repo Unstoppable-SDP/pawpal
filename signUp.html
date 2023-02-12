@@ -34,54 +34,65 @@
     <h4 class="title1">Personal Info</h4>
 
     <form action="signUp.php" method="POST">
-      <input type="text" placeholder="FName" class="textbox1" required />
-      <input type="text" placeholder="LName" class="textbox2" required />
 
-      <input type="text" placeholder="Gender" class="textbox3" required />
-      <input type="email" placeholder="Email" class="textbox4" required />
+        <input type="text" placeholder="FName" name="fname" class="textbox1" required>
+        <input type="text" placeholder="LName" name="lname" class = "textbox2" required>
+    
 
-      <input type="date" placeholder="Birthdate" class="textbox5" required />
-      <input type="password" placeholder="Password" class="textbox6" required />
+    
+        <input type="text" placeholder="Gender" name="gender" class = "textbox3" required>
+        <input type="email" placeholder="Email" name="email" class = "textbox4" required>
+    
 
-      <input type="text" placeholder="City" class="textbox7" required />
-      <input type="text" placeholder="Street" class="textbox8" required />
+    
+        <input type="date" placeholder="Birthdate" name="birthdate" class = "textbox5" required>
+        <input type="password" placeholder="Password" name="password" class = "textbox6" required>
+    
 
-      <input type="text" placeholder="House Number" class="textbox9" required />
+    
+        <input type="text" placeholder="City" name="city" class = "textbox7" required>
+        <input type="text" placeholder="Street" name="street" class = "textbox8" required>
+    
 
-      <h4 class="title2">Pets</h4>
+    
+        <input type="text" placeholder="House Number" name="housenumber" class = "textbox9" required>
+    
 
-      <input type="text" placeholder="Name" class="textboxforPets1" required />
-      <label for="Type"></label>
-      <select name="Type" required id="Type" class="textboxforPets2">
-        <option value="Dog" selected class="textop">Dog</option>
-        <option value="Cat" class="textop">Cat</option>
-        <option value="Cat" class="textop">Turtle</option>
-        <option value="Hamster" class="textop">Hamster</option>
-        <option value="Cat" class="textop">Rabbit</option>
-        <option value="Cat" class="textop">Guinea pig</option>
-        <option value="Parrot" class="textop">Birds</option>
-        <option value="Cat" class="textop">Ferret</option>
-        <option value="Cat" class="textop">Fish</option>
-        <option value="Cat" class="textop">Bearded dragons</option>
-        <option value="Cat" class="textop">Monkey</option>
-        <option value="Cat" class="textop">Amphibians</option>
-      </select>
+        <h4 class="title2">Pets</h4>
+    
+    
+        <input type="text" placeholder="Name" name="petname" class = "textboxforPets1" required>
+        <label for="Type"></label>
+        <select name="type" required id="Type" class="textboxforPets2">
+            <option value="Dog" selected class = "textop">Dog</option>
+            <option value="Cat" class = "textop">Cat</option>
+            <option value="Cat" class = "textop">Turtle</option>
+            <option value="Hamster" class = "textop">Hamster</option>
+            <option value="Cat" class = "textop">Rabbit</option>
+            <option value="Cat" class = "textop">Guinea pig</option>
+            <option value="Parrot" class = "textop">Birds</option>
+            <option value="Cat" class = "textop">Ferret</option>
+            <option value="Cat" class = "textop">Fish</option>
+            <option value="Cat" class = "textop">Bearded dragons</option>
+            <option value="Cat" class = "textop">Monkey</option>
+            <option value="Cat" class = "textop">Amphibians</option>
+        </select>
+    
 
-      <input type="number" placeholder="Age" class="textboxforPets3" required />
-      <input
-        type="text"
-        placeholder="Gender"
-        class="textboxforPets4"
-        required
-      />
+    
+        <input type="number" placeholder="Age" name="petage" class = "textboxforPets3" required>
+        <input type="text" placeholder="Gender" name="petgender" class = "textboxforPets4" required>
+    
 
-      <textarea
-        type="text"
-        placeholder="Requirements"
-        class="textboxforPets5"
-      ></textarea>
-      <h6 class="title3">Add Pet</h6>
-      <button class="buttonforpet">+</button>
+    
+        <textarea type ="text" placeholder="Requirements" name="requirements" class="textboxforPets5"></textarea>
+        <h6 class="title3">Add Pet</h6>
+        <button class="buttonforpet">+</button>
+    
+        <button class = "createButton">Create User</button>
+    </form>
+</body>
+
 
       <button class="createButton">Create User</button>
     </form>
