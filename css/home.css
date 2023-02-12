@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: Ubuntu, sans-serif;
   background-color: #f7f5eb;
@@ -101,6 +104,7 @@ a {
   height: 516px;
 }
 .promo-button {
+  display: inline-block;
   margin-top: 20px;
   border: none;
   padding: 16px 32px;
@@ -142,6 +146,7 @@ a {
   background-image: url("../img/service_bg.png");
   background-size: cover;
   height: 700px;
+  margin-top: 50px;
   padding: 80px 140px;
 }
 
@@ -149,7 +154,7 @@ a {
   color: #ce8989;
 }
 .box {
-  height: 420px;
+  height: 500px;
   padding: 50px 30px;
   color: #2f5768;
 }
@@ -157,7 +162,7 @@ a {
 .sitter-box {
   background-image: url("../img/pets_sitter.png");
   background-size: cover;
-  width: 412px;
+  width: 490px;
 }
 
 .icon {
@@ -173,6 +178,7 @@ a {
   line-height: 2;
 }
 .explore-button {
+  display: inline-block;
   background-color: #2f5768;
   border: none;
   margin-top: 20px;
@@ -181,7 +187,7 @@ a {
 .walking-box {
   background-image: url("../img/dog-walking.png");
   background-size: cover;
-  width: 442px;
+  width: 525px;
 }
 
 .services-boxes {
@@ -192,6 +198,7 @@ a {
 }
 
 .soon-button {
+  display: inline-block;
   margin-top: 20px;
   background-color: transparent;
   font-size: 16px;
@@ -209,7 +216,7 @@ a {
   height: 910px;
 }
 .review-section {
-  margin-top: 100px;
+  margin-top: 200px;
 }
 .review-title {
   text-align: center;

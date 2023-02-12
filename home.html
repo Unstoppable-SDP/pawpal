@@ -22,19 +22,19 @@
         <div class="header-content">
           <img src="img/Logo.png" />
           <ul class="menu">
-            <li><a class="active" href="#">About</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Reviews</a></li>
+            <li><a class="active" href="#about_section">About</a></li>
+            <li><a href="#service_section">Service</a></li>
+            <li><a href="#review_section">Reviews</a></li>
           </ul>
           <div class="sign-buttons">
-            <button class="button border-button">Sign Up</button>
-            <button class="button filled-button">Sign In</button>
+            <a class="button border-button" href="signUp.html">Sign Up</a>
+            <a class="button filled-button" href="Login.html">Sign In</a>
           </div>
         </div>
       </div>
     </head>
     <!-- Hero Section -->
-    <div class="hero-section">
+    <div id="hero_section" class="hero-section">
       <div class="hero-section-content">
         <div class="small-title">
           <img src="img/arrow.png" />
@@ -47,11 +47,13 @@
             to Tend Pets
           </h1>
         </div>
-        <button class="button promo-button">Check sitters</button>
+        <a class="button promo-button" href="pet_sitter.html">
+          Check sitters
+        </a>
       </div>
     </div>
     <!-- About us -->
-    <div class="about-us">
+    <div id="about_section" class="about-us">
       <div class="about-container">
         <h1 class="home-title about-title">About US</h1>
         <p>
@@ -64,7 +66,7 @@
     </div>
     <!-- Service -->
 
-    <div class="service_secttion">
+    <div id="service_section" class="service_secttion">
       <h1 class="home-title service_title">Services</h1>
       <div class="services-boxes">
         <div class="box sitter-box">
@@ -74,7 +76,7 @@
             Your pets stay overnight in your sitter’s home. They’ll be treated
             like part of the family in a comfortable environment.
           </p>
-          <button class="button explore-button">Explore</button>
+          <a class="button explore-button" href="pet_sitter.html">Explore</a>
         </div>
         <div class="services-boxes">
           <div class="box walking-box">
@@ -84,16 +86,16 @@
               Your dog gets a walk around your neighborhood. Perfect for busy
               days and dogs with extra energy to burn.
             </p>
-            <button class="soon-button">Soon</button>
+            <a class="soon-button">Soon</a>
           </div>
         </div>
       </div>
     </div>
     <!-- Review -->
-    <div class="review-section">
+    <div id="review_section" class="review-section">
       <h1 class="home-title review-title">Reviews</h1>
       <div class="review-container">
-        <img class="reviewer-image" src="/img/reviewer-image.png" />
+        <img class="reviewer-image" src="img/reviewer-image.png" />
         <div class="review-text">
           <h4 class="customer-review">Customer Reviews</h4>
           <div class="review-body">
@@ -112,13 +114,11 @@
       <img class="footer-logo" src="img/logo-white.png" />
       <div class="menu-footer">
         <ul class="menu">
-          <li><a class="active" href="#">About</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Reviews</a></li>
-          <li><a href="#">Sitters</a></li>
+          <li><a href="#about_section">About</a></li>
+          <li><a href="#service_section">Service</a></li>
+          <li><a href="#review_section">Reviews</a></li>
         </ul>
       </div>
     </footer>
-    <script src="home.js"></script>
   </body>
 </html>
