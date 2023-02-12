@@ -1,0 +1,338 @@
+* {
+  font-family: "Ubuntu";
+  font-style: normal;
+}
+body {
+  background: #f7f5eb;
+}
+.pet-stters-continer {
+  padding: 120px;
+}
+img {
+  position: relative;
+  width: 298px;
+  height: 304px;
+
+  background: #ffffff;
+  border-radius: 25px;
+}
+.search {
+  color: #555;
+  display: flex;
+  box-sizing: border-box;
+  width: 638px;
+  height: 97px;
+  border: 1px solid #959595;
+  border-radius: 100px;
+}
+input[type="searchs"] {
+  border: none;
+  background: transparent;
+  padding: 10px 8px;
+
+  border-radius: inherit;
+
+  border: none;
+  margin-top: 0px;
+  margin-right: 16px;
+
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 38px;
+  letter-spacing: 0.01em;
+  color: #4f4f4f;
+}
+
+input[type="searchs"]::placeholder {
+  color: #bbb;
+}
+
+.searchButton {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 50px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.searchButton:hover {
+  opacity: 1;
+}
+
+.searchButton:focus,
+input[type="searchs"]:focus {
+  box-shadow: 0 0 3px 0 #1183d6;
+  border-color: #1183d6;
+  outline: none;
+}
+
+.topTitle {
+  width: 700px;
+  height: 38px;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 38px;
+  letter-spacing: 0.01em;
+  color: #4f4f4f;
+  margin-left: 20px;
+}
+
+.text {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 38px;
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.priceNo {
+  position: relative;
+  width: 200px;
+  height: 38px;
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 1;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 0.09em;
+  color: #000000;
+}
+.priceout {
+  background-color: #fcefe2;
+  border-radius: 50px;
+  padding: 10px 0;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.rating {
+  display: flex;
+}
+.rating span {
+  display: block;
+  margin: 0 10px;
+}
+.price-booking {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  width: 100%;
+}
+.price-and-ratting {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.book {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 162px;
+  height: 80px;
+  background: #ce8989;
+  border-radius: 247px;
+  align-self: end;
+}
+.bButton {
+  border-radius: 100px;
+  border-style: none;
+  position: relative;
+  width: 162px;
+  height: 80px;
+  background-color: #ce8989;
+  text-align: center;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 38px;
+  letter-spacing: 0.09em;
+  color: #fcefe2;
+  transition: all 0.2s ease-in-out;
+}
+.bButton:hover {
+  transform: scale(1.1);
+}
+
+.checked {
+  color: black;
+}
+.unchecked {
+  color: #fcefe2;
+}
+.three-col {
+  display: flex;
+  gap: 50px;
+}
+.filterContainer {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  max-width: 287px;
+  border: 1px solid #959595;
+  border-radius: 100px;
+}
+.select-btn {
+  display: flex;
+  justify-content: space-between;
+  height: 97px;
+  width: 260px;
+  align-items: center;
+  padding: 0;
+  margin-left: 15px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 38px;
+  letter-spacing: 0.01em;
+  color: #4f4f4f;
+}
+
+.select-btn .arrow-dwn {
+  justify-content: center;
+  display: flex;
+  height: 97px;
+  width: 260px;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.select-btn.open .arrow-dwn {
+  transform: rotate(-180deg);
+}
+
+.petTypeBox > div {
+  flex: none;
+  order: 0;
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 0.09em;
+  color: #000000;
+  padding: 10px 20px;
+  background: #a0c3d2;
+  border-radius: 247px;
+  width: fit-content;
+}
+.petTypeBox {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+}
+.list-items {
+  position: absolute;
+  margin-top: 25px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 16px;
+  display: none;
+  z-index: 20;
+}
+.select-btn.open ~ .list-items {
+  display: block;
+}
+
+.list-items .item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 70px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0 15px;
+  border-radius: 4px;
+}
+.list-items :hover {
+  background-color: #fcefe2;
+}
+.item .item-text {
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 38px;
+  letter-spacing: 0.01em;
+  color: #4f4f4f;
+}
+.item .checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  border-radius: 4px;
+  margin-right: 12px;
+  border: 1.5px solid #4f4f4f;
+  transition: all 0.3s ease-in-out;
+}
+.checkbox .check-icon {
+  font-size: 35px;
+  color: #4f4f4f;
+  transform: scale(0);
+}
+.item.ticked .checkbox {
+  background-color: #a0c3d2;
+  border-color: #4f4f4f;
+}
+
+.item.ticked .check-icon {
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.sitters {
+  display: grid;
+  grid-auto-rows: auto;
+  position: absolute;
+  width: 1240px;
+  height: 446px;
+  gap: 50px;
+  padding: 0px 36px;
+  margin: 100px 0;
+}
+
+.card {
+  margin: 20px 0;
+  background-color: #eac7c7;
+  border-radius: 25px;
+  padding: 55px 40px;
+}
+.selectors {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.page-head {
+  padding: 0 20px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
