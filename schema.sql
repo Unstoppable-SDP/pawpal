@@ -48,9 +48,9 @@ CREATE TABLE pets_type (
 );
 
 CREATE TABLE Pets (
-	pet_id INT PRIMARY KEY,
+	pet_id INT PRIMARY KEY AUTO_INCREMENT,
     pet_name VARCHAR(25),
-    owner_id INT NOT NULL,
+    owner_id INT,
     pet_type VARCHAR(25),
     pet_age INT,
     pet_gender VARCHAR(6),
@@ -80,4 +80,3 @@ CREATE TABLE booking(
         CONSTRAINT quan
 				check(quantity < 7)
 );
-
