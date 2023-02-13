@@ -40,7 +40,10 @@
     
 
     
-        <input type="text" placeholder="Gender" name="gender" class = "textbox3" required>
+        <select name="gender" required id="gender" class="textbox3">
+          <option value="Female" selected class = "textop">Female</option>
+           <option value="Male" class = "textop">Male</option>
+      </select>
         <input type="email" placeholder="Email" name="email" class = "textbox4" required>
     
 
@@ -66,16 +69,16 @@
         <select name="type" required id="Type" class="textboxforPets2">
             <option value="Dog" selected class = "textop">Dog</option>
             <option value="Cat" class = "textop">Cat</option>
-            <option value="Cat" class = "textop">Turtle</option>
+            <option value="Turtle" class = "textop">Turtle</option>
             <option value="Hamster" class = "textop">Hamster</option>
-            <option value="Cat" class = "textop">Rabbit</option>
-            <option value="Cat" class = "textop">Guinea pig</option>
-            <option value="Parrot" class = "textop">Birds</option>
-            <option value="Cat" class = "textop">Ferret</option>
-            <option value="Cat" class = "textop">Fish</option>
-            <option value="Cat" class = "textop">Bearded dragons</option>
-            <option value="Cat" class = "textop">Monkey</option>
-            <option value="Cat" class = "textop">Amphibians</option>
+            <option value="Rabbit" class = "textop">Rabbit</option>
+            <option value="Guinea pig" class = "textop">Guinea pig</option>
+            <option value="Birds" class = "textop">Birds</option>
+            <option value="Ferret" class = "textop">Ferret</option>
+            <option value="Fish" class = "textop">Fish</option>
+            <option value="Bearded dragons" class = "textop">Bearded dragons</option>
+            <option value="Monkey" class = "textop">Monkey</option>
+            <option value="Amphibians" class = "textop">Amphibians</option>
         </select>
     
 
@@ -89,7 +92,7 @@
         <h6 class="title3">Add Pet</h6>
         <button class="buttonforpet">+</button>
     
-        <button class = "createButton">Create User</button>
+        <input type="submit" class = "createButton" name="createuser" value="Create User">
     </form>
 </body>
 
