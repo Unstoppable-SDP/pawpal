@@ -17,6 +17,7 @@ $petgender=$_POST['petgender'];
 $requirements=$_POST['requirements'];
 // database insert SQL code
 
+if(isset( $_POST['createuser'])) {
 $sql= mysqli_query($con,"SELECT * FROM `personal_info` WHERE`email`='$email' ");
 if(mysqli_num_rows($sql) > 0){
 	echo ("<SCRIPT LANGUAGE='JavaScript'>
@@ -61,7 +62,7 @@ $stmt->close();
 $con->close();
 
 }
-
+}
 
 
 
