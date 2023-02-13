@@ -33,7 +33,7 @@
     </head>
     <h4 class="title1">Personal Info</h4>
 
-    <form action="signUp.php" method="POST">
+    <form action="signUp.php" method="post">
 
         <input type="text" placeholder="FName" name="fname" class="textbox1" required>
         <input type="text" placeholder="LName" name="lname" class = "textbox2" required>
@@ -84,9 +84,11 @@
 
     
         <input type="number" placeholder="Age" name="petage" class = "textboxforPets3" required>
-        <input type="text" placeholder="Gender" name="petgender" class = "textboxforPets4" required>
     
-
+        <select name="petgender" required id="gender" class="textboxforPets4">
+          <option value="Female" selected class = "textop">Female</option>
+           <option value="Male" class = "textop">Male</option>
+      </select>
     
         <textarea type ="text" placeholder="Requirements" name="requirements" class="textboxforPets5"></textarea>
         <h6 class="title3">Add Pet</h6>

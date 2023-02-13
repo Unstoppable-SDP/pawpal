@@ -244,6 +244,10 @@ input {
     height: 68px;
     left: 763px;
     top: 1042px;
+    font-size: 40px;
+    font-weight: 400;
+    color: #4F4F4F;
+    padding-left:0.8em;
     background: #F7F5EB;
     border: 1px solid #4F4F4F;
     border-radius: 100px;

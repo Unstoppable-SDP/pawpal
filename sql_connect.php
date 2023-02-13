@@ -10,3 +10,4 @@ $con = new mysqli($host, $user, $password, $dbname,$port)
 	or die ('Could not connect to the database server' . mysqli_connect_error());
  //echo'successfully connect';
 ?>
+
