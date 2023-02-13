@@ -54,7 +54,9 @@
 
     
         <input type="text" placeholder="City" name="city" class = "textbox7" required>
-        <input type="text" placeholder="Street" name="street" class = "textbox8" required>
+        <input type="password" placeholder="Repeat Password" name="repwd" class = "textbox8" required>
+
+        <input type="text" placeholder="Street" name="street" class = "textbox10" required>
     
 
     
@@ -64,10 +66,10 @@
         <h4 class="title2">Pets</h4>
     
     
-        <input type="text" placeholder="Name" name="petname" class = "textboxforPets1" required>
         <label for="Type"></label>
-        <select name="type" required id="Type" class="textboxforPets2">
-            <option value="Dog" selected class = "textop">Dog</option>
+        <select name="type" required id="Type" class="textboxforPets1">
+          <option value="">Please choose a pet</option>  
+          <option value="Dog"  class = "textop">Dog</option>
             <option value="Cat" class = "textop">Cat</option>
             <option value="Turtle" class = "textop">Turtle</option>
             <option value="Hamster" class = "textop">Hamster</option>
@@ -80,19 +82,22 @@
             <option value="Monkey" class = "textop">Monkey</option>
             <option value="Amphibians" class = "textop">Amphibians</option>
         </select>
-    
 
-    
-        <input type="number" placeholder="Age" name="petage" class = "textboxforPets3" required>
-    
-        <select name="petgender" required id="gender" class="textboxforPets4">
-          <option value="Female" selected class = "textop">Female</option>
-           <option value="Male" class = "textop">Male</option>
+        <select required name="quantity" class="textboxforPets2" id="Quantity-select" >
+          <option value="">Quantity</option>
+          <option value="1" >One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+          <option value="4">Four</option>
+          <option value="5">Five</option>
+          <option value="6">Six</option>
       </select>
     
-        <textarea type ="text" placeholder="Requirements" name="requirements" class="textboxforPets5"></textarea>
-        <h6 class="title3">Add Pet</h6>
-        <input type="button" class="buttonforpet" name="addpet" value="+">    
+
+
+    
+        <textarea type ="text" placeholder="Requirements" name="requirements" class="textboxforPets3"></textarea>
+           
         <input type="submit" class = "createButton" name="createuser" value="Create User">
     </form>
 </body>
