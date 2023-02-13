@@ -10,14 +10,22 @@ $password=$_POST['password'];
 $city=$_POST['city'];
 $street=$_POST['street'];
 $housenumber=$_POST['housenumber'];
-$petname=$_POST['petname'];
+$repwd=$_POST['repwd'];
 $type=$_POST['type'];
-$petage=$_POST['petage'];
-$petgender=$_POST['petgender'];
+$quantity=$_POST['quantity'];
 $requirements=$_POST['requirements'];
 // database insert SQL code
 
 if(isset( $_POST['createuser'])) {
+	if ($password != $repwd)
+	{
+	echo ("<SCRIPT LANGUAGE='JavaScript'>
+	window.alert('Password mismatch: Please try again...')
+	window.location.href='signUp.html'
+	</SCRIPT>");
+	exit();
+	
+	}else{
 $sql= mysqli_query($con,"SELECT * FROM `personal_info` WHERE`email`='$email' ");
 if(mysqli_num_rows($sql) > 0){
 	echo ("<SCRIPT LANGUAGE='JavaScript'>
@@ -41,8 +49,8 @@ where `owner_id` = (SELECT  `owner_id`
 					FROM  `pets_owner` 
 					ORDER BY `owner_id` DESC LIMIT 1)");
 
-$stmt=$con->prepare("INSERT INTO pets(`pet_name`,`pet_type`,`pet_age`,`pet_gender`,`requirements`) VALUES (?,?,?,?,?)");
-$stmt-> bind_param('ssiss',$petname,$type,$petage,$petgender,$requirements);
+$stmt=$con->prepare("INSERT INTO pets(`pet_type`,`quantity`,`requirements`) VALUES (?,?,?)");
+$stmt-> bind_param('sis',$type,$quantity,$requirements);
 $stmt->execute();
 
 $info=mysqli_query($con,"UPDATE `pets` 
@@ -63,7 +71,7 @@ $con->close();
 
 }
 }
-
+}
 
 
 ?>

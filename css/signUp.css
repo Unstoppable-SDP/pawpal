@@ -196,6 +196,17 @@ input {
     border-radius: 100px;
 }
 
+.textbox10 {
+    position: absolute;
+    width: 500px;
+    height: 68px;
+    left: 763px;
+    top: 722px;
+    background: #F7F5EB;
+    border: 1px solid #4F4F4F;
+    border-radius: 100px;
+}
+
 .textboxforPets1 {
     position: absolute;
     width: 500px;
@@ -205,6 +216,15 @@ input {
     background: #F7F5EB; 
     border: 1px solid #4F4F4F;
     border-radius: 100px;
+    padding-right:0.8em;
+    padding-left:0.8em;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 38px;
+    letter-spacing: 0.01em;
+    color: #4F4F4F;
 }
 
 .textboxforPets2 {
@@ -230,38 +250,12 @@ input {
 .textboxforPets3 {
     position: absolute;
     width: 500px;
-    height: 68px;
+    height: 168px;
     left: 115px;
     top: 1042px;
     background: #F7F5EB;
     border: 1px solid #4F4F4F;
-    border-radius: 100px;
-}
-
-.textboxforPets4 {
-    position: absolute;
-    width: 500px;
-    height: 68px;
-    left: 763px;
-    top: 1042px;
-    font-size: 40px;
-    font-weight: 400;
-    color: #4F4F4F;
-    padding-left:0.8em;
-    background: #F7F5EB;
-    border: 1px solid #4F4F4F;
-    border-radius: 100px;
-}
-
-.textboxforPets5 {
-    position: absolute;
-    width: 500px;
-    height: 196px;
-    left: 115px;
-    top: 1154px;
     resize: none;
-    background: #F7F5EB;
-    border: 1px solid #4F4F4F;
     border-radius: 50px;
     padding-right:0.8em;
     padding-left:0.8em;
@@ -274,35 +268,13 @@ input {
     color: #4F4F4F;
 }
 
-.buttonforpet {
-    box-sizing: border-box;
-    position: absolute;
-    width: 85.13px;
-    height: 87.26px;
-    left: 1000.24px;
-    top: 1220px;
-    cursor: pointer;
-
-    background: #F7F5EB;
-    border: 1px solid #4F4F4F;
-    transform: rotate(88.65deg);
-    border-radius: 50%;
-
-    font-family: 'Ubuntu';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 50px;
-    line-height: 38px;
-    letter-spacing: 0.01em;
-    color: #4F4F4F;
-}
 
 .createButton {
     position: absolute;
     width: 381px;
     height: 113px;
     left: 529px;
-    top: 1471px;
+    top: 1271px;
     cursor: pointer;
 
     background: #A0C3D2;
