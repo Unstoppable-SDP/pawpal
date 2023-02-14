@@ -60,7 +60,7 @@ CREATE TABLE Pets (
 );
 
 CREATE TABLE booking(
-	booking_id INT unique,
+	booking_id INT unique AUTO_INCREMENT,
     pet_id INT NOT NULL,
     sitter_id INT NOT NULL,
     start_date DATE,

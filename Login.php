@@ -1,7 +1,7 @@
 <?php
 
 require ('sql_connect.php');
-session_start();
+include "header.php";
 
 // if the user login redirect to the home page
 
@@ -70,8 +70,8 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
               placeholder="Email"
               class="input-field"
             />
-          </div>
-          <div class="input box">
+          
+         
             <label for="password"></label>
             <input
               type="password"
@@ -81,7 +81,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
               placeholder="Password"
               class="input-field"
             />
-          </div>
+            </div>
           <input class="L_btn" type="submit" value="Sign in" />
         </form>
         <div class="div">
@@ -93,4 +93,5 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
       </div>
     </div>
   </body>
+  
 </html>

@@ -1,3 +1,52 @@
+<?php 
+        require_once ('sql_connect.php');
+        include "header.php";
+        
+        $is_user = isset($_SESSION["user_id"]);
+        
+        
+        if (!$is_user){
+            echo ("<SCRIPT LANGUAGE='JavaScript'>
+	        window.alert('Please log in to book a pet sitter for your pet!')
+        	window.location.href='Login.php'
+	        </SCRIPT>");
+            exit();
+        }else{
+        
+        $id=$_SESSION["user_id"];
+        $idOwner=mysqli_query($con,"SELECT owner_id
+        FROM pets p
+        where p.owner_id=(Select owner_id
+        from pets_owner
+        where personal_info='$id'
+        )");
+        $rowowner=mysqli_fetch_assoc($idOwner);
+        $idO=$rowowner['owner_id'];
+        $result = mysqli_query($con,"SELECT p.pet_id, p.pet_type
+        FROM pets p
+        where p.owner_id=(Select owner_id
+        from pets_owner
+        where owner_id='$idO'
+        )");
+        $row=mysqli_fetch_assoc($result);
+        if(isset( $_POST['book'])) {
+            $startdate=$_POST['startdate'];
+            $enddate=$_POST['enddate'];
+            $quantity=$_POST['quantity'];
+            //Calculate days
+            $from=date_create($startdate);
+            $to=date_create($enddate);
+            $diff=date_diff($from,$to)->format('%a');
+            //Calculate total price
+            //$total=$diff
+            //echo $diff;  
+            // $stmt=$con->prepare("INSERT INTO booking(`pet_id`,`sitter_id`,`start_date`,`end_date`,`quantity`,`total_price`)VALUES (?,?,?,?,?,?)");
+            // $stmt-> bind_param('iissid',$,$,$startdate,$enddate,$quantity,$);
+            // $stmt->execute();
+
+        }}
+       
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,69 +57,33 @@
     <title>Booking</title>
     <link rel="icon" href="img/smallLogo.png" />
     <link rel="stylesheet" href="css/Booking.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
 </head>
 
 <body >
-    <head>
-        <div class="header">
-          <div class="header-content">
-            <img src="img/Logo.png" />
-            <ul class="menu">
-              <li><a class="active" href="#">About</a></li>
-              <li><a href="#">Service</a></li>
-              <li><a href="#">Reviews</a></li>
-            </ul>
-            
-          </div>
-        </div>
-      </head>
     <div class="flex">
         <div class="container">
             <div class="Booking">
                 <img src="img/d_t.png" style=" width: 500px;height: 250px;">
             </div>
-            <div class="Avatar">
-                <a href="profile.html"><img src="img/5735078.png" style="width:60px;height:60px;"></a>
-            </div>
-            <form>
+            
+            <form method="POST">
                 <div class="input-container">
+                </div>
+                    <div class="label">
+                    <label for ="date">Start Date</label>
+                    <label for="date">End Date</label>
+                    </div>
                     <div class="input">
-                        <label for ="date">Start Date</label>
-                        <input type="date" required id="date" name="date" />
-                    </div>
-                    <div class="input box">
-                        <label for="date">End Date</label>
-                        <input type="date" required id="date" name="date" placeholder="End Date"/>
-                    </div>
+                        
+                        <input type="date" required id="date" name="startdate" />
+                        <input type="date" required id="date" name="enddate" placeholder="End Date"/>
+                    
                 </div>
                 <div class="Pet">
-                    <select required class="Pet-select" id="Pet-select" >
-                        <option value="">Please choose a pet</option>
-                        <option value="Dog">Dog</option>
-                        <option value="Cat">Cat</option>
-                        <option value="Turtle">Turtle</option>
-                        <option value="Hamster">Hamster</option>
-                        <option value="Rabbit">Rabbit</option>
-                        <option value="Guinea pig">Guinea pig</option>
-                        <option value="Birds">Birds</option>
-                        <option value="Ferret"> Ferret</option>
-                        <option value="Fish">Fish</option>
-                        <option value="Bearded dragons">Bearded dragons</option>
-                        <option value="Monkey">Monkey</option>
-                        <option value="Amphibians">Amphibians</option>
-                    </select>
-                    <select required class="Quantity-select" id="Quantity-select" >
+                    
+                    <div class="Pet-select" id="Pet-select" ><?php echo $row['pet_type']; ?></div>
+                        
+                    <select required class="Quantity-select" id="Quantity-select" name="quantity">
                         <option value="">Quantity</option>
                         <option value="1" >One</option>
                         <option value="2">Two</option>
@@ -82,8 +95,8 @@
                 </div>
                 <div class="price">Total price: <B >1000 SAR</B></div>
                 <div class="method">Payment method: <B >Cash</B></div>
-                <input class="L_btn" type="submit" value="Book" />
-            </form method="get">
+                <input class="L_btn" type="submit" name="book" value="Book" />
+            </form >
         </div>
     </div>
     
