@@ -1,4 +1,5 @@
 <?php 
+        
         require_once ('sql_connect.php');
         $result1 = mysqli_query($con,"SELECT pets_sitter.sitter_id, personal_info.Fname,personal_info.Lname, personal_info.email, personal_info.Gender, personal_info.Age, 
         personal_info.city, pets_sitter.image, pets_sitter.daily_price,pets_sitter.rate
@@ -35,89 +36,7 @@
               <input type="searchs" name="search" placeholder="Search" />
               <button class="searchButton">Search</button>
           </form>
-          <div class="filterContainer">
-            <div class="select-btn">
-              <span class="btn-text">Filter</span>
-              <span class="arrow-dwn">
-                <i class="fa-solid fa-chevron-down"></i>
-              </span>
-            </div>
-            <ul class="list-items">
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Cat</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Dog</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Turtle</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Hamster</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Rabbit</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Guinea pig</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Birds</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Ferret</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Fish</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Bearded dragon</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Monkey</span>
-              </li>
-              <li class="item">
-                <span class="checkbox">
-                  <i class="fa-solid fa-check check-icon"></i>
-                </span>
-                <span class="item-text">Amphibians</span>
-              </li>
-            </ul>
-          </div>
-        </div>
+
       </div>
       <div class="sitters">
 
@@ -305,12 +224,6 @@
                                 <?php
                   }}
           ?>
-
-            
-
-
-
- 
       </div>
     </div>
     <script src="js/scriptFilter.js"></script>
