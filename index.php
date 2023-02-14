@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    $is_user = isset($_SESSION["user_id"]);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -27,8 +32,16 @@
             <li><a href="#review_section">Reviews</a></li>
           </ul>
           <div class="sign-buttons">
+            <?php if(!$is_user): ?>
             <a class="button border-button" href="signUp.html">Sign Up</a>
-            <a class="button filled-button" href="Login.html">Sign In</a>
+            <a class="button filled-button" href="Login.php">Sign In</a>
+            <?php else: ?>
+              <a class="logout" href="Logout.php">Log out</a>
+            <a href="profile.html">
+              <img class="profile-image" src="img/profile_image.png" />
+            </a>
+       
+            <?php endif; ?>
           </div>
         </div>
       </div>

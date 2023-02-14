@@ -101,7 +101,7 @@ a {
 
 }
 
-.input input {
+.input .input-field {
     width: 400px;
     height: 68px;
     border-radius: 100px;
@@ -176,3 +176,12 @@ form input[type="submit"] {
     left: 0;
     width: 100%;
 }
+
+.error-message{
+  color: #c42e29;
+}
+
+.red-border{
+  border: 0.4px solid #c42e29;
+}
+
