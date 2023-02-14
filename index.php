@@ -1,51 +1,8 @@
 <?php
-    session_start();
-    $is_user = isset($_SESSION["user_id"]);
+  $title = "PawPal:A Simple Way to Tend Pets"; 
+  $css_file = " ";                  
+  include "header.php";                 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700"
-      rel="stylesheet"
-    />
-
-    <link rel="icon" href="img/smallLogo.png" />
-    <link rel="stylesheet" href="css/home.css" />
-    <title>PawPal:A Simple Way to Tend Pets</title>
-  </head>
-  <body>
-    <!-- header -->
-    <head>
-      <div class="header">
-        <div class="header-content">
-          <img src="img/Logo.png" />
-          <ul class="menu">
-            <li><a class="active" href="#about_section">About</a></li>
-            <li><a href="#service_section">Service</a></li>
-            <li><a href="#review_section">Reviews</a></li>
-          </ul>
-          <div class="sign-buttons">
-            <?php if(!$is_user): ?>
-            <a class="button border-button" href="signUp.html">Sign Up</a>
-            <a class="button filled-button" href="Login.php">Sign In</a>
-            <?php else: ?>
-              <a class="logout" href="Logout.php">Log out</a>
-            <a href="profile.html">
-              <img class="profile-image" src="img/profile_image.png" />
-            </a>
-       
-            <?php endif; ?>
-          </div>
-        </div>
-      </div>
-    </head>
     <!-- Hero Section -->
     <div id="hero_section" class="hero-section">
       <div class="hero-section-content">
@@ -60,7 +17,7 @@
             to Tend Pets
           </h1>
         </div>
-        <a class="button promo-button" href="pet_sitter.html">
+        <a class="button promo-button" href="pet_sitter.php">
           Check sitters
         </a>
       </div>
@@ -89,7 +46,7 @@
             Your pets stay overnight in your sitter’s home. They’ll be treated
             like part of the family in a comfortable environment.
           </p>
-          <a class="button explore-button" href="pet_sitter.html">Explore</a>
+          <a class="button explore-button" href="pet_sitter.php">Explore</a>
         </div>
         <div class="services-boxes">
           <div class="box walking-box">
@@ -122,16 +79,7 @@
         </div>
       </div>
     </div>
-    <!-- Footer -->
-    <footer>
-      <img class="footer-logo" src="img/logo-white.png" />
-      <div class="menu-footer">
-        <ul class="menu">
-          <li><a href="#about_section">About</a></li>
-          <li><a href="#service_section">Service</a></li>
-          <li><a href="#review_section">Reviews</a></li>
-        </ul>
-      </div>
-    </footer>
-  </body>
-</html>
+    <?php
+      $script = "";
+      include "footer.php";           
+      ?>
