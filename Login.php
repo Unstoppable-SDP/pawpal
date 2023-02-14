@@ -1,4 +1,5 @@
 <?php
+
 require ('sql_connect.php');
 session_start();
 
@@ -48,22 +49,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
   </head>
 
   <body>
-    <head>
-      <div class="header">
-        <div class="header-content">
-          <img src="img/Logo.png" />
-          <ul class="menu">
-            <li><a class="active" href="#">About</a></li>
-            <li><a href="#">Service</a></li>
-            <li><a href="#">Reviews</a></li>
-          </ul>
-          <div class="sign-buttons">
-            <button class="button border-button">Sign Up</button>
-            <button class="button filled-button">Sign In</button>
-          </div>
-        </div>
-      </div>
-    </head>
+    
     <div class="flex">
       <div class="container">
         <div class="user">
@@ -101,7 +87,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="div">
           <div class="line"></div>
           <div class="signup">
-            Don't Have an account? <a href="signUp.html">Sign up</a>
+            Don't Have an account? <a href="signUp.php">Sign up</a>
           </div>
         </div>
       </div>

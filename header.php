@@ -38,7 +38,7 @@
           </ul>
           <div class="sign-buttons">
             <?php if(!$is_user): ?>
-            <a class="button border-button" href="signUp.html">Sign Up</a>
+            <a class="button border-button" href="signUp.php">Sign Up</a>
             <a class="button filled-button" href="Login.php">Sign In</a>
             <?php else: ?>
               <a class="logout" href="Logout.php">Log out</a>
