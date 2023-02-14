@@ -1,5 +1,13 @@
 <?php
 require ('sql_connect.php');
+session_start();
+
+// if the user login redirect to the home page
+
+if(isset($_SESSION["user_id"])){
+  header("Location: index.php");
+  exit;
+}
 
 $is_invalid = false;
 
@@ -15,7 +23,6 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     $result = $con -> query($sql);
     $password = $result -> fetch_assoc();
     if($password  !== null &&  strcmp($password["password"], $_POST["password"]) == 0 ){
-      session_start();
       $_SESSION["user_id"] = $id;
       header("Location: index.php");
       exit;
