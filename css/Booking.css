@@ -12,39 +12,12 @@ body {
     height: 100vh;
     background-color: #F7F5EB;
 }
-a {
-    text-decoration: none;
-    color: #2e2e2e;
-  }
-  
-  .header {
-    position: relative;
-  }
-  .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-top: 15px;
-    width: 100%;
-    position: absolute;
-  }
-  
-  .menu {
-    display: flex;
-    gap: 22px;
-    font-size: 18px;
-    list-style-type: none;
-    color: #2e2e2e;
-    cursor: pointer;
-  }
-  .active {
-    color: #659bb3;
-  }
+
 
 .flex {
     display: flex;
     align-items: center;
-    padding-top: 200px;
+    padding-top: 300px;
     justify-content: center;
 }
 
@@ -62,16 +35,10 @@ a {
 .Booking {
     background-size: cover;
     position: absolute;
-    Top: -205px;
+    Top: -180px;
     Left: 190px;
 }
 
-.Avatar{
-    background-size: cover;
-    position: absolute;
-    Top: -160px;
-    Left: 990px;
-}
 
 form input[type="submit"] {
     padding: 4px 20px;
@@ -102,9 +69,10 @@ form input[type="submit"] {
 }
 
 .input {
-    margin: 20px 30px;
+    margin: 5px 30px;
+    gap: 60px;
     position: relative;
-    display: inline-block;
+    display: inline-flex;
 }
 
 .input input {
@@ -123,12 +91,13 @@ form input[type="submit"] {
     
 }
 
-.input label{
-    padding-left: 25px;
-    padding-bottom:5px;
-    font-size: 20px;
-    display:block;
-
+.label{
+    margin: 15px 45px;
+    gap: 220px;
+    position: relative;
+    display:flex;
+    
+    font-size: 20px;   
 }
 
 .price {
@@ -151,22 +120,24 @@ B{
 
 
 .Pet{
-    margin: 10px 30px;
+    margin: 10px 130px;
     position: relative;
-    display: flex;
+    display:inline-flex;
 }
 
 .Pet-select {
-    width: 250px;
+    width: 150px;
     height: 50px;
     border-radius: 100px;
     background: transparent;
     outline: none;
     border: 0.4px solid #4F4F4F;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 38px;
     letter-spacing: 0.01em;
+    text-align: center;
+    padding-top: 5px;
     padding-left: 25px;
     padding-right: 25px;
 }

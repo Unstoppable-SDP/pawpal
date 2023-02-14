@@ -1,6 +1,7 @@
 <?php
 
 require ('sql_connect.php');
+include "header.php";
 if(isset( $_POST['createuser'])) {
 $fname=$_POST['fname'];
 $lname=$_POST['lname'];
@@ -21,16 +22,16 @@ $requirements=$_POST['requirements'];
 	if ($password != $repwd)
 	{
 	echo ("<SCRIPT LANGUAGE='JavaScript'>
-	window.alert('Password mismatch: Please try again...')
+	window.alert('Password mismatch: Please try again')
 	window.location.href='signUp.php'
 	</SCRIPT>");
-	exit();
+
 	
 	}else{
 $sql= mysqli_query($con,"SELECT * FROM `personal_info` WHERE`email`='$email' ");
 if(mysqli_num_rows($sql) > 0){
 	echo ("<SCRIPT LANGUAGE='JavaScript'>
-window.alert('The Email you have entered is already registered, Try another...')
+window.alert('The Email you have entered is already registered: Please try another')
 window.location.href='signUp.php'
 </SCRIPT>");
 }else{
@@ -88,7 +89,6 @@ $con->close();
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/signUp.css" />
-    <link rel="stylesheet" href="css/home.css" />
   </head>
 
   <body>
