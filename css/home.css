@@ -49,6 +49,7 @@ a {
 
 .sign-buttons {
   display: flex;
+  align-items: center;
   gap: 24px;
 }
 .active {
@@ -70,6 +71,9 @@ a {
   background-image: url("../img/hero-section.png");
   background-position: center;
   background-size: cover;
+}
+.profile-image{
+  width: 50px;
 }
 
 .hero-section-content {
@@ -272,3 +276,4 @@ footer {
 .menu-footer .menu li a {
   color: white;
 }
+
