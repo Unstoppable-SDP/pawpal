@@ -1,6 +1,6 @@
-<?php
+<?php 
         require_once ('sql_connect.php');
-        $result = mysqli_query($con,"SELECT personal_info.Fname, personal_info.email, personal_info.Gender, personal_info.Age, 
+        $result1 = mysqli_query($con,"SELECT pets_sitter.sitter_id, personal_info.Fname,personal_info.Lname, personal_info.email, personal_info.Gender, personal_info.Age, 
         personal_info.city, pets_sitter.image, pets_sitter.daily_price,pets_sitter.rate
         FROM pets_sitter INNER JOIN personal_info ON pets_sitter.sitter_id=personal_info.persnal_id");
 ?>
@@ -121,47 +121,59 @@
       </div>
       <div class="sitters">
         <?php 
-            while($row=mysqli_fetch_assoc($result))
+            while($row=mysqli_fetch_assoc($result1))
             {
             ?>
             
-                <div class="card">
-                <div class="three-col">
-                    <div class="img">
-                    <img
-                    <?php echo $row['image']; ?>
-                    />
-                    </div>
-                    <div class="info">
-                    <div class="text"><?php echo $row['Fname']; ?></div>
-                    <div class="text"><?php echo $row['email']; ?></div>
-                    <div class="text"><?php echo $row['Gender']; ?></div>
-                    <div class="text"><?php echo $row['Age']; ?></div>
-                    <div class="text"><?php echo $row['city']; ?></div>
-                    </div>
-                    <div class="price-booking">
-                    <div class="price-and-ratting">
-                        <div class="rating">
-                        <span class="fa fa-star checked fa-2x"></span>
-                        <span class="fa fa-star checked fa-2x"></span>
-                        <span class="fa fa-star checked fa-2x"></span>
-                        <span class="fa fa-star checked fa-2x"></span>
-                        <span class="fa fa-star unchecked fa-2x"></span>
+                  <div class="card">
+                    <div class="three-col">
+                      <div class="img">
+                        <?php echo "<img src=". $row['image'] . "/>"; ?>
+                      </div>
+                      <div class="info">
+                        <div class="text"><?php echo $row['Fname']," " ,$row['Lname']; ?></div>
+                        <div class="text"><?php echo $row['email']; ?></div>
+                        <div class="text"><?php echo $row['Gender']; ?></div>
+                        <div class="text"><?php echo $row['Age']; ?></div>
+                        <div class="text"><?php echo $row['city']; ?></div>
+                      </div>
+                      <div class="price-booking">
+                        <div class="price-and-ratting">
+                          <div class="rating">
+                              <?php 
+                                for ($x=0;$x< $row['rate'];$x++){
+                                  echo "<span class='fa fa-star checked fa-2x'></span>";}?> 
+                              <?php
+                                for ($x=0;$x< 5-$row['rate'];$x++){
+                                echo "<span class='fa fa-star unchecked fa-2x'></span>";}?>
+                          </div>
+                          <div class="text price">Daily Price:</div>
+                          <div class="priceout">
+                            <div class="priceNo">SAR <?php echo $row['daily_price']; ?></div>
+                          </div>
                         </div>
-                        <div class="text price">Daily Price:</div>
-                        <div class="priceout">
-                        <div class="priceNo"><?php echo $row['daily_price']; ?></div>
-                        </div>
+                        <form class="book">
+                            <button class="bButton" type="submit">Book</button>
+                        </form>
+                      </div>
                     </div>
-                    <form class="book">
-                        <button class="bButton" type="submit">Book</button>
-                    </form>
+
+                    <div class="petTypeBox">
+                      <?php 
+                      $result2 = mysqli_query($con,"SELECT type_name
+                      FROM pets_type 
+                      WHERE sitter_id =". $row['sitter_id']);
+                      while($row2=mysqli_fetch_assoc($result2))
+                      {
+                      ?>
+                        <div><?php echo $row2['type_name']; ?></div>
+                      <?php
+                      }
+                      ?>
                     </div>
-                </div>
 
-
-            </div>
-            <?php
+                  </div>
+          <?php
             }
         ?>
  
