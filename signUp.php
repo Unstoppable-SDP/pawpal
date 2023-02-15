@@ -137,15 +137,8 @@ window.location.href='Login.php'
       <option value="Amphibians" class="textop">Amphibians</option>
     </select>
 
-    <select required name="quantity" class="textboxforPets2" id="Quantity-select">
-      <option value="">Quantity</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-      <option value="4">Four</option>
-      <option value="5">Five</option>
-      <option value="6">Six</option>
-    </select>
+    <input type="number" placeholder="Quantity" required name="quantity" class="textboxforPets2" id="Quantity-select">
+      
 
     <textarea type="text" placeholder="Requirements" name="requirements" class="textboxforPets3"></textarea>
 
