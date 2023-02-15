@@ -1,6 +1,6 @@
 <?php
 
-require ('sql_connect.php');
+require('sql_connect.php');
 
 
 $title = "Profile";
@@ -25,47 +25,43 @@ $rowPets = mysqli_fetch_array($resultPets);
 $petsID = $rowPets['pet_id'];
 $queryBooking = "SELECT * FROM `booking` WHERE `pet_id` = '$petsID'";
 $resultBooking = mysqli_query($con, $queryBooking);
-$rowBooking ="";
+$rowBooking = "";
 
 $date = date("Y-m-d");
 
-while ($Booking = mysqli_fetch_assoc($resultBooking))
-{
+while ($Booking = mysqli_fetch_assoc($resultBooking)) {
     if ($Booking['start_date'] > $date) {
         $date = $Booking['start_date'];
         $rowBooking = $Booking;
         break;
     }
-
 }
 
-while ($Booking = mysqli_fetch_assoc($resultBooking))
-{
+while ($Booking = mysqli_fetch_assoc($resultBooking)) {
     if ($Booking['start_date'] > date("Y-m-d")) {
         if ($Booking['start_date'] < $date) {
             $date = $Booking['start_date'];
             $rowBooking = $Booking;
         }
     }
-
 }
 
 
 //database insert SQL code
-if(isset($_POST['updateuser'])) {
-$fname=$_POST['fname'];
-$lname=$_POST['lname'];
-$gender=$_POST['gender'];
-$birthdate=$_POST['birthdate'];
-$password=$_POST['password'];
-$city=$_POST['city'];
-$street=$_POST['street'];
-$housenumber=$_POST['housenumber'];
-$type=$_POST['Type'];
-$quantity=$_POST['quantity'];
-$requirements=$_POST['requirements'];
+if (isset($_POST['updateuser'])) {
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $gender = $_POST['gender'];
+    $birthdate = $_POST['birthdate'];
+    $password = $_POST['password'];
+    $city = $_POST['city'];
+    $street = $_POST['street'];
+    $housenumber = $_POST['housenumber'];
+    $type = $_POST['Type'];
+    $quantity = $_POST['quantity'];
+    $requirements = $_POST['requirements'];
 
-$changePersonal = "UPDATE `personal_info` 
+    $changePersonal = "UPDATE `personal_info` 
 SET `Fname` = '$fname', 
     `Lname` = '$lname', 
     `Gender` = '$gender', 
@@ -74,33 +70,33 @@ SET `Fname` = '$fname',
     `street` = '$street', 
     `hn` = '$housenumber'
 where `persnal_id` = '$ID'";
-$infoPersonal=mysqli_query($con, $changePersonal);
+    $infoPersonal = mysqli_query($con, $changePersonal);
 
-$changePassword = "UPDATE `pets` 
+    $changePassword = "UPDATE `pets` 
 SET `pet_type` = '$type', 
     `quantity` = '$quantity', 
     `requirements` = '$requirements' 
 where `owner_id` = '$ownerID'";
-$infoPassword=mysqli_query($con, $changePassword);
+    $infoPassword = mysqli_query($con, $changePassword);
 
-$changePets = "UPDATE `pets_owner` 
+    $changePets = "UPDATE `pets_owner` 
 SET `password` = '$password' 
 where `personal_info` = '$ID'";
-$infoPets=mysqli_query($con, $changePets);
+    $infoPets = mysqli_query($con, $changePets);
 
-echo ("<SCRIPT LANGUAGE='JavaScript'>
-window.alert('Updated Successfully!.')
-window.location.href='profile.php'
+    echo ("<SCRIPT LANGUAGE='JavaScript'>
+    swal({
+        title: 'Updated Successfully!',
+        icon: 'success',
+      })
 </SCRIPT>");
-
-$stmt->close();
-$con->close();
 }
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -264,6 +260,5 @@ $con->close();
         </form>
 
 </body>
+
 </html>
-
-

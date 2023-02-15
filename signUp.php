@@ -20,16 +20,21 @@ if (isset($_POST['createuser'])) {
 
   if ($password != $repwd) {
     echo ("<SCRIPT LANGUAGE='JavaScript'>
-	window.alert('Password mismatch: Please try again')
-	window.location.href='signUp.php'
+      swal({
+        title: 'Password mismatch: Please try again',
+        icon: 'error',
+      })
 	</SCRIPT>");
   } else {
     $sql = mysqli_query($con, "SELECT * FROM `personal_info` WHERE`email`='$email' ");
     if (mysqli_num_rows($sql) > 0) {
-      echo ("<SCRIPT LANGUAGE='JavaScript'>
-window.alert('The Email you have entered is already registered: Please try another')
-window.location.href='signUp.php'
-</SCRIPT>");
+      echo ("
+      <SCRIPT LANGUAGE='JavaScript'>
+        swal({
+          title: 'The Email you have entered is already registered: Please try another',
+          icon: 'error',
+        })
+      </SCRIPT>");
     } else {
       $stmt = $con->prepare("INSERT INTO personal_info (`email`,`Fname`,`Lname`,`Gender`,`Birthdate`,`city`,`street`,`hn`) VALUES (?,?,?,?,?,?,?,?)");
       $stmt->bind_param('sssssssi', $email, $fname, $lname, $gender, $birthdate, $city, $street, $housenumber);
@@ -60,8 +65,10 @@ where `pet_id` = (SELECT  `pet_id`
 					ORDER BY `pet_id` DESC LIMIT 1)");
 
       echo ("<SCRIPT LANGUAGE='JavaScript'>
-window.alert('Registration Successfully!.')
-window.location.href='Login.php'
+          swal({
+            title: 'Registration Successfully!.',
+            icon: 'error',
+          })
 </SCRIPT>");
 
       $stmt->close();
