@@ -1,8 +1,10 @@
 <?php
-require_once('sql_connect.php');
+
+require('sql_connect.php');
 session_start();
 
 // if the user login redirect to the home page
+
 if (isset($_SESSION["user_id"])) {
   header("Location: index.php");
   exit;
@@ -27,6 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
       exit;
     } else {
       $is_invalid = true;
+      // var_dump(strcmp($password["password"], $_POST["password"]) == 0);
+      // exit;
     }
   }
 }
@@ -59,7 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         <div class="input">
           <label for="email"></label>
           <input type="email" required id="email" name="email" placeholder="Email" />
-
 
           <label for="password"></label>
           <input type="password" required id="password" name="password" placeholder="Password" class="input-field" />
