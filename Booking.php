@@ -1,16 +1,46 @@
 <?php
 require_once('sql_connect.php');
+$title = "Booking";
+$css_file = "<link rel='stylesheet' href='css/Booking.css' />";
+include "header.php";
 session_start();
-// error_reporting(E_ERROR | E_PARSE);
+
+error_reporting(E_ERROR | E_PARSE);
 
 
 $is_user = isset($_SESSION["user_id"]);
 
 if (!$is_user) {
-    echo ("<SCRIPT LANGUAGE='JavaScript'>
-	        window.alert('Please log in to book a pet sitter for your pet!')
-        	window.location.href='Login.php'
-	        </SCRIPT>");
+    echo ('
+    <SCRIPT LANGUAGE="JavaScript">
+    swal({
+        title: "Access Denied!",
+        text: "Please log in to book a pet sitter for your pet!",
+        icon: "error",
+        buttons: {
+          back: { text: "Go back to Homepage",
+            value: "back",
+            className:"bg-gray"
+            },
+          login: {
+            text: "Log In",
+            value: "login",
+            className: "bg-pink",
+          }
+        },
+        dangerMode: true,
+      })
+      .then((value) => {
+        switch (value) {
+          case "login":
+            window.location.href="Login.php";
+            break;
+       
+          default:
+            window.location.href="index.php";
+        }
+      });
+        </script>');
     exit();
 } else {
 
@@ -59,22 +89,57 @@ if (!$is_user) {
             $stmt = $con->prepare("INSERT INTO booking(`pet_id`,`sitter_id`,`start_date`,`end_date`,`quantity`,`total_price`)VALUES (?,?,?,?,?,?)");
             $stmt->bind_param('iissid', $idP, $idS, $startdate, $enddate, $quantity, $total);
             $stmt->execute();
-            echo ("<SCRIPT LANGUAGE='JavaScript'>
-            window.alert('Booking Successfully!.')
-            window.location.href='index.php'
-            </SCRIPT>");
+            echo ('<SCRIPT LANGUAGE="JavaScript">
+            swal({
+                title: "Booking Successfully!",
+                icon: "success",
+                buttons: {
+                  booking: { text: "Check Your Booking",
+                    value: "booking",
+                    className:"bg-gray"
+                    },
+                  home: {
+                    text: "Home Page",
+                    value: "home",
+                    className: "bg-pink",
+                  }
+                },
+                dangerMode: true,
+              })
+              .then((value) => {
+                switch (value) {
+                  case "booking":
+                    window.location.href="profile.php";
+                    break;
+               
+                  default:
+                    window.location.href="index.php";
+                }
+              });
+            </SCRIPT>');
         } else {
-            echo ("<SCRIPT LANGUAGE='JavaScript'>
-            window.alert('Sorry I can't take care of your pet.')
-            window.location.href='index.php'
-            </SCRIPT>");
+            echo ('
+            <SCRIPT LANGUAGE="JavaScript">
+            swal({
+                title: "Sorry",
+                text: " I can\'t take care of your pet.",
+                icon: "error",
+                buttons: {
+                  sitters: {
+                    text: "pet sitter",
+                    className: "bg-pink",
+                  }
+                },
+              })
+              .then((value) => {
+                    window.location.href="pet_sitter.php";
+              });
+            </SCRIPT>');
         }
     }
 }
 
-$title = "Booking";
-$css_file = "<link rel='stylesheet' href='css/Booking.css' />";
-include "header.php";
+
 ?>
 
 <div class="flex">
@@ -116,42 +181,41 @@ include "header.php";
         </form>
     </div>
 </div>
-<script>
-    // get the price of sitter hours
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const price = urlParams.get('price');
-    let startDate;
-    let endDate;
-    let quantity;
-    let totalPrice;
-    // get the quantity
-    document.querySelector("#Quantity-select").addEventListener("change", (e) => {
-        quantity = e.target.value;
-        setThePrice();
-    });
-    // get startDate
-    document.querySelector("#start-date").addEventListener("change", (e) => {
-        startDate = new Date(e.target.value).getTime();
-        setThePrice();
-    });
-    // get endDate
-    document.querySelector("#end-date").addEventListener("change", (e) => {
-        endDate = new Date(e.target.value).getTime();
-        setThePrice();
-    });
-    const setThePrice = () => {
-        if (quantity == null || startDate == null || endDate == null) {
-            document.querySelector("#price").innerHTML = "-";
-        } else {
-            const diffInDays = (endDate - startDate) / (1000 * 3600 * 24)
-            document.querySelector("#price").innerHTML = diffInDays * price + (quantity - 1) * 0.25 * diffInDays
+
+<div>
+    <script>
+        let startDate, endDate, quantity, totalPrice;
+        // get the price of sitter in hours
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const price = urlParams.get('price');
+        // get the quantity
+        document.querySelector("#Quantity-select").addEventListener("change", (e) => {
+            quantity = e.target.value;
+            setThePrice();
+        });
+        // get startDate
+        document.querySelector("#start-date").addEventListener("change", (e) => {
+            startDate = new Date(e.target.value).getTime();
+            setThePrice();
+        });
+        // get endDate
+        document.querySelector("#end-date").addEventListener("change", (e) => {
+            endDate = new Date(e.target.value).getTime();
+            setThePrice();
+        });
+        const setThePrice = () => {
+            if (quantity == null || startDate == null || endDate == null) {
+                document.querySelector("#price").innerHTML = "-";
+            } else {
+                const diffInDays = (endDate - startDate) / (1000 * 3600 * 24)
+                document.querySelector("#price").innerHTML = diffInDays * price + (quantity - 1) * 0.25 * diffInDays
+            }
         }
-    }
-</script>
+    </script>
 
 
 
-<?php
-include "footer.php";
-?>
+    <?php
+    include "footer.php";
+    ?>

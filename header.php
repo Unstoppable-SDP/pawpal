@@ -14,6 +14,7 @@ $is_user = isset($_SESSION["user_id"]);
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <link rel="icon" href="img/smallLogo.png" />
   <link rel="stylesheet" href="css/home.css" />
   <title><?php echo $title; ?></title>

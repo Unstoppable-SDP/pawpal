@@ -71,7 +71,7 @@ a {
   background-position: center;
   background-size: cover;
 }
-.profile-image{
+.profile-image {
   width: 50px;
 }
 
@@ -275,4 +275,15 @@ footer {
 .menu-footer .menu li a {
   color: white;
 }
-
+.bg-pink {
+  background-color: #ce8989;
+}
+.bg-pink:hover {
+  background-color: #855050;
+}
+.bg-gray {
+  background-color: #4f4f4f;
+}
+.bg-gray:hover {
+  background-color: #272727;
+}
