@@ -49,7 +49,7 @@ body {
 
 }
 
-.input .input-field {
+.input input {
     width: 400px;
     height: 68px;
     border-radius: 100px;
@@ -63,6 +63,10 @@ body {
     padding-left: 25px;
     padding-right: 25px;
 
+}
+
+.input-field{
+    margin-top: 20px;
 }
 
 

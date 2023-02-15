@@ -78,12 +78,12 @@
                                     </div>
                                     <div class="text price">Daily Price:</div>
                                     <div class="priceout">
-                                      <div class="priceNo">SAR <?php echo $items['daily_price']; ?></div>
+                                      <div class="priceNo">SAR <?php echo $items['daily_price'];?></div>
                                     </div>
                                   </div>
-                                  <form class="book" action="Booking.php">
-                                      <button class="bButton" type="submit" >Book</button>
-                                      </form>
+                                  <div class="book" >
+                                      <button class="bButton" onclick="window.location.href='Booking.php?price=<?php echo $items['daily_price']; ?>&Id=<?php echo $items['sitter_id']; ?>';">Book</button>
+                                      </div>
                                 </div>
                               </div>
 
@@ -141,9 +141,9 @@
                                           <div class="priceNo">SAR <?php echo $row['daily_price']; ?></div>
                                         </div>
                                       </div>
-                                      <form class="book" action="Booking.php">
-                                      <button class="bButton" type="submit" >Book</button>
-                                      </form>
+                                      <div class="book" >
+                                      <button class="bButton" onclick="window.location.href='Booking.php?price=<?php echo $row['daily_price']; ?>&Id=<?php echo $row['sitter_id']; ?>';">Book</button>
+                                      </div>
                                     </div>
                                   </div>
 
@@ -200,9 +200,9 @@
                                           <div class="priceNo">SAR <?php echo $row['daily_price']; ?></div>
                                         </div>
                                       </div>
-                                      <form class="book" action="Booking.php">
-                                      <button class="bButton" type="submit" >Book</button>
-                                      </form>
+                                      <div class="book" >
+                                      <button class="bButton" onclick="window.location.href='Booking.php?price=<?php echo $row['daily_price']; ?>&Id=<?php echo $row['sitter_id']; ?>';">Book</button>
+                                      </div>
                                     </div>
                                   </div>
 
