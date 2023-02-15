@@ -40,7 +40,7 @@ $is_user = isset($_SESSION["user_id"]);
             <a class="button filled-button" href="Login.php">Sign In</a>
           <?php else : ?>
             <a class="logout" href="Logout.php">Log out</a>
-            <a href="profile.html">
+            <a href="profile.php">
               <img class="profile-image" src="img/profile_image.png" />
             </a>
           <?php endif; ?>
