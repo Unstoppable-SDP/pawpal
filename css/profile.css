@@ -13,16 +13,16 @@ body {
 
 .profileImg {
     position: absolute;
-    left: 583px;
-    top: 80px;
+    left: 670px;
+    top: 120px;
 }
 
 .profiletitle {
     position: absolute;
     width: 119px;
     height: 38px;
-    left: 663px;
-    top: 360px;
+    left: 745px;
+    top: 400px;
 
     font-family: 'Ubuntu';
     font-style: normal;
