@@ -68,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
               id="email"
               name="email"
               placeholder="Email"
-              class="input-field"
+               
             />
           
          

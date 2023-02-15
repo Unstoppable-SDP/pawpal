@@ -143,6 +143,7 @@ input[type="searchs"]:focus {
   gap: 30px;
 }
 .book {
+  
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -165,6 +166,7 @@ input[type="searchs"]:focus {
   font-weight: 400;
   font-size: 36px;
   line-height: 38px;
+  cursor: pointer;
   letter-spacing: 0.09em;
   color: #fcefe2;
   transition: all 0.2s ease-in-out;

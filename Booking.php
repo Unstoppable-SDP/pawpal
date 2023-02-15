@@ -12,16 +12,21 @@
 	        </SCRIPT>");
             exit();
         }else{
-        
+
+        $idS=$_GET['Id'];
+        $Dprice=$_GET['price'];
         $id=$_SESSION["user_id"];
+
         $idOwner=mysqli_query($con,"SELECT owner_id
         FROM pets p
         where p.owner_id=(Select owner_id
         from pets_owner
         where personal_info='$id'
         )");
+
         $rowowner=mysqli_fetch_assoc($idOwner);
         $idO=$rowowner['owner_id'];
+
         $result = mysqli_query($con,"SELECT p.pet_id, p.pet_type
         FROM pets p
         where p.owner_id=(Select owner_id
@@ -29,7 +34,17 @@
         where owner_id='$idO'
         )");
         $row=mysqli_fetch_assoc($result);
+        $idP=$row['pet_id'];
+        $type=$row['pet_type'];
+        
+       
         if(isset( $_POST['book'])) {
+
+        $TypeCon= mysqli_query($con,"SELECT *
+        from  pets_type p
+        where p.sitter_id='$idS' and type_name='$type'");
+
+        if(mysqli_num_rows($TypeCon) >0){
             $startdate=$_POST['startdate'];
             $enddate=$_POST['enddate'];
             $quantity=$_POST['quantity'];
@@ -38,17 +53,29 @@
             $to=date_create($enddate);
             $diff=date_diff($from,$to)->format('%a');
             //Calculate total price
-            //$total=$diff
+            $total=$diff*$Dprice+($quantity-1)*0.25*$Dprice;
             //echo $diff;  
-            // $stmt=$con->prepare("INSERT INTO booking(`pet_id`,`sitter_id`,`start_date`,`end_date`,`quantity`,`total_price`)VALUES (?,?,?,?,?,?)");
-            // $stmt-> bind_param('iissid',$,$,$startdate,$enddate,$quantity,$);
-            // $stmt->execute();
+            $stmt=$con->prepare("INSERT INTO booking(`pet_id`,`sitter_id`,`start_date`,`end_date`,`quantity`,`total_price`)VALUES (?,?,?,?,?,?)");
+            $stmt-> bind_param('iissid',$idP,$idS,$startdate,$enddate,$quantity,$total);
+            $stmt->execute();
+            echo ("<SCRIPT LANGUAGE='JavaScript'>
+            window.alert('Booking Successfully!.')
+            window.location.href='index.php'
+            </SCRIPT>");
+        
+    }else{
+        echo ("<SCRIPT LANGUAGE='JavaScript'>
+            window.alert('Sorry I can't take care of your pet.')
+            window.location.href='index.php'
+            </SCRIPT>");
+           
 
-        }}
+        }}}
        
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 
 <head>
     <meta charset="UTF-8" />
@@ -81,7 +108,7 @@
                 </div>
                 <div class="Pet">
                     
-                    <div class="Pet-select" id="Pet-select" ><?php echo $row['pet_type']; ?></div>
+                    <div class="Pet-select" id="Pet-select" ><?php echo $type; ?></div>
                         
                     <select required class="Quantity-select" id="Quantity-select" name="quantity">
                         <option value="">Quantity</option>
