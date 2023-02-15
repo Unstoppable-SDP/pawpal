@@ -144,7 +144,7 @@ Insert into personal_info(email,Fname,Lname,Gender,Birthdate,city,street,hn)
 Values ("ibrahim2@gmail.com", "Ibrahim", "Alshammari", "Male", "1993-08-08", "Buraidah","King Khalid Road", 6789);
 
 Insert into pets_sitter(image,daily_price,rate)
-Values ("https://olympic.sa/sites/default/files/cocoon/%d8%a5%d8%a8%d8%b1%d8%a7%d9%87%d9%8a%d9%85%20%d8%a7%d9%84%d9%85%d8%b9%d9%8a%d9%82%d9%84_0.jpeg",85,4);
+Values ("https://www.eyeofriyadh.com/news_images/2018/01/34af0107fa133.jpg",85,4);
 
 UPDATE pets_sitter 
 SET personal_info = (SELECT persnal_id 
