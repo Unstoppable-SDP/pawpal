@@ -219,32 +219,8 @@ $con->close();
                     } ?>>Amphibians</option>
             </select>
             <label class = "labelpets2">Quantity</label>
-            <select name="quantity" class="textboxpets2" id="Quantity-select">
-                <option value="1" <?php 
-                    if ($rowPets['quantity'] == 1) {
-                        ?> selected<?php
-                    } ?>>One</option>
-                <option value="2" <?php 
-                    if ($rowPets['quantity'] == 2) {
-                        ?> selected<?php
-                    } ?>>Two</option>
-                <option value="3" <?php 
-                    if ($rowPets['quantity'] == 3) {
-                        ?> selected<?php
-                    } ?>>Three</option>
-                <option value="4" <?php 
-                    if ($rowPets['quantity'] == 4) {
-                        ?> selected<?php
-                    } ?>>Four</option>
-                <option value="5" <?php 
-                    if ($rowPets['quantity'] == 5) {
-                        ?> selected<?php
-                    } ?>>Five</option>
-                <option value="6" <?php 
-                    if ($rowPets['quantity'] == 6) {
-                        ?> selected<?php
-                    } ?>>Six</option>
-            </select>
+            <input type="number" value="<?php echo $rowPets['quantity'];?>"  name="quantity" class="textboxpets2" id="Quantity-select">
+            
         
     
         
