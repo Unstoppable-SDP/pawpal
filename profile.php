@@ -51,16 +51,6 @@ while ($Booking = mysqli_fetch_assoc($resultBooking))
 }
 
 
-$sitterID = $rowBooking['sitter_id'];
-$sitterQuery = "SELECT * FROM `pets_sitter` WHERE `sitter_id` = '$sitterID'";
-$personalSitter = mysqli_query($con, $sitterQuery);
-$personalSitterArray = mysqli_fetch_array($personalSitter);
-
-$personalSitterID = $personalSitterArray['personal_info'];
-$sitterNameQuery = "SELECT `Fname`, `Lname` FROM `personal_info` WHERE `persnal_id` = '$personalSitterID'";
-$sitterName = mysqli_query($con, $sitterNameQuery);
-$sitterNameArray = mysqli_fetch_array($sitterName);
-
 //database insert SQL code
 if(isset($_POST['updateuser'])) {
 $fname=$_POST['fname'];
@@ -231,26 +221,46 @@ $con->close();
     
             <input type="submit" class = "updatebutton" name="updateuser" value="Update User">        
     
+            
+            <?php
+                if ($rowBooking == "") {
+            ?>
+                    <h4 class = "title4">No Bookings Yet, Choose a Sitter for Your Pets!</h4>
+            <?php
+                } 
+                else {
+                    $sitterID = $rowBooking['sitter_id'];
+                    $sitterQuery = "SELECT * FROM `pets_sitter` WHERE `sitter_id` = '$sitterID'";
+                    $personalSitter = mysqli_query($con, $sitterQuery);
+                    $personalSitterArray = mysqli_fetch_array($personalSitter);
 
-            <h4 class = "title4">Bookings</h4>
+                    $personalSitterID = $personalSitterArray['personal_info'];
+                    $sitterNameQuery = "SELECT `Fname`, `Lname` FROM `personal_info` WHERE `persnal_id` = '$personalSitterID'";
+                    $sitterName = mysqli_query($con, $sitterNameQuery);
+                    $sitterNameArray = mysqli_fetch_array($sitterName);
+            ?>
+                    <h4 class = "title4">Bookings</h4>
 
     
-            <label class = "labelbooking1">Booking Number</label>
-            <input type="number"  value="<?php echo $rowBooking['booking_id'];?>" readonly class="textboxbooking1" name = "bookingno">
-            <label class="labelbooking2">Pet Quantity</label>
-            <input type="text" value="<?php echo $rowBooking['quantity'];?>" readonly class = "textboxbooking2" name = "petQuant">
+                    <label class = "labelbooking1">Booking Number</label>
+                    <input type="number"  value="<?php echo $rowBooking['booking_id'];?>" readonly class="textboxbooking1" name = "bookingno">
+                    <label class="labelbooking2">Pet Quantity</label>
+                    <input type="text" value="<?php echo $rowBooking['quantity'];?>" readonly class = "textboxbooking2" name = "petQuant">
     
 
     
-            <label class = "labelbooking3">Sitter Name</label>
-            <input type="text" value="<?php echo $sitterNameArray['Fname'], ' ', $sitterNameArray['Lname'];?>" readonly class = "textboxbooking3" name = "sittername">
-            <label class = "labelbooking4">Start Date</label>
-            <input type="date" value="<?php echo $rowBooking['start_date'];?>" readonly class = "textboxbooking4" name = "starterdate">
+                    <label class = "labelbooking3">Sitter Name</label>
+                    <input type="text" value="<?php echo $sitterNameArray['Fname'], ' ', $sitterNameArray['Lname'];?>" readonly class = "textboxbooking3" name = "sittername">
+                    <label class = "labelbooking4">Start Date</label>
+                    <input type="date" value="<?php echo $rowBooking['start_date'];?>" readonly class = "textboxbooking4" name = "starterdate">
 
 
     
-            <label class = "labelbooking5">End Date</label>
-            <input type="date" value="<?php echo $rowBooking['end_date'];?>" readonly class = "textboxbooking5" name = "enddate">
+                    <label class = "labelbooking5">End Date</label>
+                    <input type="date" value="<?php echo $rowBooking['end_date'];?>" readonly class = "textboxbooking5" name = "enddate">
+            <?php
+                }
+            ?>
         </form>
 
 </body>
