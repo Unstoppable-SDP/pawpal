@@ -18,8 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" href="img/smallLogo.png" />
     <link rel="stylesheet" href="css/home.css" />
-    <!--title><!?php echo $title; ?></title-->
-    <!--?php echo $css_file; ?-->
+    <title><?php echo $title; ?></title>
+    <?php echo $css_file; ?>
   </head>
   <body>
     <!-- header -->
