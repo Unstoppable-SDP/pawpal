@@ -117,13 +117,13 @@ B {
 }
 
 .Pet {
-  margin: 10px 130px;
+  margin: 10px 30px;
   position: relative;
   display: inline-flex;
 }
 
 .Pet-select {
-  width: 150px;
+  width: 250px;
   height: 50px;
   border-radius: 100px;
   background: transparent;
