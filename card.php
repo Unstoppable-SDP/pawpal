@@ -1,4 +1,9 @@
-  <div class="card">
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+<div class="card">
       <div class="three-col">
           <div>
               <img class="sitter-image" src=<?php echo $items['image'] ?> />
