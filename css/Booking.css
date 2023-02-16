@@ -60,6 +60,9 @@ form input[type="submit"] {
 .L_btn:hover {
   transform: scale(1.1);
 }
+.L_btn:disabled {
+  opacity: 0.75;
+}
 
 .input-container {
   display: flex;

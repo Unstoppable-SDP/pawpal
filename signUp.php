@@ -20,20 +20,16 @@ if (isset($_POST['createuser'])) {
 
   if ($password != $repwd) {
     echo ("<SCRIPT LANGUAGE='JavaScript'>
-      swal({
-        title: 'Password mismatch: Please try again',
-        icon: 'error',
-      })
+    window.alert('Password mismatch: Please try again')
+    window.location.href='signUp.php'
 	</SCRIPT>");
   } else {
     $sql = mysqli_query($con, "SELECT * FROM `personal_info` WHERE`email`='$email' ");
     if (mysqli_num_rows($sql) > 0) {
       echo ("
       <SCRIPT LANGUAGE='JavaScript'>
-        swal({
-          title: 'The Email you have entered is already registered: Please try another',
-          icon: 'error',
-        })
+      window.alert('The Email you have entered is already registered: Please try another')
+      window.location.href='signUp.php'
       </SCRIPT>");
     } else {
       $stmt = $con->prepare("INSERT INTO personal_info (`email`,`Fname`,`Lname`,`Gender`,`Birthdate`,`city`,`street`,`hn`) VALUES (?,?,?,?,?,?,?,?)");
@@ -65,10 +61,8 @@ where `pet_id` = (SELECT  `pet_id`
 					ORDER BY `pet_id` DESC LIMIT 1)");
 
       echo ("<SCRIPT LANGUAGE='JavaScript'>
-          swal({
-            title: 'Registration Successfully!.',
-            icon: 'error',
-          })
+      window.alert('Registration Successfully!.')
+      window.location.href='Login.php'
 </SCRIPT>");
 
       $stmt->close();
@@ -77,7 +71,6 @@ where `pet_id` = (SELECT  `pet_id`
   }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,68 +82,72 @@ where `pet_id` = (SELECT  `pet_id`
   <link rel="icon" href="img/smallLogo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/signUp.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body>
-
-  <h4 class="title1">Personal Info</h4>
-
-  <form method="post">
-
-    <input type="text" placeholder="FName" name="fname" class="textbox1" required>
-    <input type="text" placeholder="LName" name="lname" class="textbox2" required>
+  <div class="signUp-cont">
 
 
-    <select name="gender" required id="gender" class="textbox3">
-      <option value="Female" selected class="textop">Female</option>
-      <option value="Male" class="textop">Male</option>
-    </select>
-    <input type="email" placeholder="Email" name="email" class="textbox4" required>
+    <h4 class="title1">Personal Info</h4>
 
+    <form class="sign-up-form" method="post">
+      <div>
+        <input type="text" placeholder="FName" name="fname" class="textbox1" required>
+        <input type="text" placeholder="LName" name="lname" class="textbox2" required>
 
+      </div>
+      <div>
+        <select name="gender" required id="gender" class="textbox3">
+          <option value="Female" selected class="textop">Female</option>
+          <option value="Male" class="textop">Male</option>
+        </select>
+        <input type="email" placeholder="Email" name="email" class="textbox4" required>
 
-    <input type="date" placeholder="Birthdate" name="birthdate" class="textbox5" required>
-    <input type="password" placeholder="Password" name="password" class="textbox6" required>
+      </div>
+      <div>
+        <input type="date" placeholder="Birthdate" name="birthdate" class="textbox5" required>
+        <input type="password" placeholder="Password" name="password" class="textbox6" required>
+      </div>
+      <div>
+        <input type="text" placeholder="City" name="city" class="textbox7" required>
+        <input type="password" placeholder="Repeat Password" name="repwd" class="textbox8" required>
+      </div>
+      <div>
+        <input type="text" placeholder="Street" name="street" class="textbox10" required>
+        <input type="text" placeholder="House Number" name="housenumber" class="textbox9" required>
+      </div>
+      <div>
 
+        <select name="type" required id="Type" class="textboxforPets1">
+          <option value="">Please choose a pet</option>
+          <option value="Dog" class="textop">Dog</option>
+          <option value="Cat" class="textop">Cat</option>
+          <option value="Turtle" class="textop">Turtle</option>
+          <option value="Hamster" class="textop">Hamster</option>
+          <option value="Rabbit" class="textop">Rabbit</option>
+          <option value="Guinea pig" class="textop">Guinea pig</option>
+          <option value="Birds" class="textop">Birds</option>
+          <option value="Ferret" class="textop">Ferret</option>
+          <option value="Fish" class="textop">Fish</option>
+          <option value="Bearded dragons" class="textop">Bearded dragons</option>
+          <option value="Monkey" class="textop">Monkey</option>
+          <option value="Amphibians" class="textop">Amphibians</option>
+        </select>
+        <input type="number" placeholder="Quantity" required name="quantity" class="textboxforPets2" id="Quantity-select">
+      </div>
 
+      <textarea type="text" placeholder="Requirements" name="requirements" class="textboxforPets3"></textarea>
+      <div>
+        <div class="login">
+          Do you have an account already? <a href="logIn.php">Log In</a>
+        </div>
+      </div>
 
-    <input type="text" placeholder="City" name="city" class="textbox7" required>
-    <input type="password" placeholder="Repeat Password" name="repwd" class="textbox8" required>
-
-    <input type="text" placeholder="Street" name="street" class="textbox10" required>
-
-
-
-    <input type="text" placeholder="House Number" name="housenumber" class="textbox9" required>
-
-
-    <h4 class="title2">Pets</h4>
-
-
-    <label for="Type"></label>
-    <select name="type" required id="Type" class="textboxforPets1">
-      <option value="">Please choose a pet</option>
-      <option value="Dog" class="textop">Dog</option>
-      <option value="Cat" class="textop">Cat</option>
-      <option value="Turtle" class="textop">Turtle</option>
-      <option value="Hamster" class="textop">Hamster</option>
-      <option value="Rabbit" class="textop">Rabbit</option>
-      <option value="Guinea pig" class="textop">Guinea pig</option>
-      <option value="Birds" class="textop">Birds</option>
-      <option value="Ferret" class="textop">Ferret</option>
-      <option value="Fish" class="textop">Fish</option>
-      <option value="Bearded dragons" class="textop">Bearded dragons</option>
-      <option value="Monkey" class="textop">Monkey</option>
-      <option value="Amphibians" class="textop">Amphibians</option>
-    </select>
-
-    <input type="number" placeholder="Quantity" required name="quantity" class="textboxforPets2" id="Quantity-select">
-      
-
-    <textarea type="text" placeholder="Requirements" name="requirements" class="textboxforPets3"></textarea>
-
-    <input type="submit" class="createButton" name="createuser" value="Create User">
-  </form>
+      <input type="submit" class="createButton" name="createuser" value="Create User">
+    </form>
+  </div>
 </body>
 
 </html>

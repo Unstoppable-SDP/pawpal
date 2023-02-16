@@ -6,7 +6,7 @@ body {
   background: #f7f5eb;
 }
 .pet-stters-continer {
-  padding: 120px;
+  padding: 120px 10%;
 }
 
 .sitter-image {
@@ -21,8 +21,8 @@ body {
   color: #555;
   display: flex;
   box-sizing: border-box;
-  width: 638px;
-  height: 97px;
+  width: 380px;
+  height: 70px;
   border: 1px solid #959595;
   border-radius: 100px;
   margin-left: 25px;
@@ -37,7 +37,7 @@ input[type="searchs"] {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 20px;
   line-height: 38px;
   letter-spacing: 0.01em;
   color: #4f4f4f;
@@ -74,7 +74,7 @@ input[type="searchs"]:focus {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
-  font-size: 96px;
+  font-size: 50px;
   line-height: 38px;
   letter-spacing: 0.01em;
   color: #4f4f4f;
@@ -85,7 +85,7 @@ input[type="searchs"]:focus {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 26px;
   line-height: 38px;
   letter-spacing: 0.01em;
   color: #000000;
@@ -102,7 +102,7 @@ input[type="searchs"]:focus {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 38px;
   text-align: center;
   letter-spacing: 0.09em;
@@ -127,12 +127,14 @@ input[type="searchs"]:focus {
 .price-booking {
   display: flex;
   flex-direction: column;
+  justify-content: end;
   gap: 45px;
   width: 100%;
 }
 .price-and-ratting {
   display: flex;
   flex-direction: column;
+  justify-content: end;
   gap: 30px;
 }
 .book {
@@ -156,7 +158,7 @@ input[type="searchs"]:focus {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 38px;
   cursor: pointer;
   letter-spacing: 0.09em;
@@ -198,7 +200,7 @@ input[type="searchs"]:focus {
   cursor: pointer;
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 25px;
   line-height: 38px;
   letter-spacing: 0.01em;
   color: #4f4f4f;
@@ -224,8 +226,8 @@ input[type="searchs"]:focus {
   font-family: "Ubuntu";
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 38px;
+  font-size: 20px;
+  line-height: 20px;
   text-align: center;
   letter-spacing: 0.09em;
   color: #000000;
@@ -265,7 +267,7 @@ input[type="searchs"]:focus {
 }
 .item .item-text {
   font-weight: 400;
-  font-size: 35px;
+  font-size: 25px;
   line-height: 38px;
   letter-spacing: 0.01em;
   color: #4f4f4f;
@@ -297,12 +299,11 @@ input[type="searchs"]:focus {
 }
 
 .sitters {
-  display: grid;
-  grid-auto-rows: auto;
-  width: 1240px;
+  display: flex;
+  flex-direction: column;
   gap: 50px;
   padding: 0px 36px;
-  margin: 100px 0;
+  margin: 80px 50px;
 }
 
 .card {
@@ -324,6 +325,6 @@ input[type="searchs"]:focus {
 .info {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 20px;
+  justify-content: center;
 }
-
