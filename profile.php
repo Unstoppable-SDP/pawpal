@@ -220,11 +220,8 @@ where `personal_info` = '$ID'";
 
 
         <?php
-        if ($rowBooking == "") {
-        ?>
-            <h4 class="title4">No Bookings Yet, Choose a Sitter for Your Pets!</h4>
-        <?php
-        } else {
+        if ($rowBooking != ""):?>
+             <?php
             $sitterID = $rowBooking['sitter_id'];
             $sitterQuery = "SELECT * FROM `pets_sitter` WHERE `sitter_id` = '$sitterID'";
             $personalSitter = mysqli_query($con, $sitterQuery);
@@ -254,9 +251,13 @@ where `personal_info` = '$ID'";
 
             <label class="labelbooking5">End Date</label>
             <input type="date" value="<?php echo $rowBooking['end_date']; ?>" readonly class="textboxbooking5" name="enddate">
-        <?php
-        }
-        ?>
+            
+            
+            <?php else :?>
+               
+                <h4 class="title4">No Bookings Yet, Choose a Sitter for Your Pets!</h4>
+            <?php endif; ?>
+        
     </form>
 
 </body>
