@@ -20,20 +20,16 @@ if (isset($_POST['createuser'])) {
 
   if ($password != $repwd) {
     echo ("<SCRIPT LANGUAGE='JavaScript'>
-      swal({
-        title: 'Password mismatch: Please try again',
-        icon: 'error',
-      })
+    window.alert('Password mismatch: Please try again')
+    window.location.href='signUp.php'
 	</SCRIPT>");
   } else {
     $sql = mysqli_query($con, "SELECT * FROM `personal_info` WHERE`email`='$email' ");
     if (mysqli_num_rows($sql) > 0) {
       echo ("
       <SCRIPT LANGUAGE='JavaScript'>
-        swal({
-          title: 'The Email you have entered is already registered: Please try another',
-          icon: 'error',
-        })
+      window.alert('The Email you have entered is already registered: Please try another')
+      window.location.href='signUp.php'
       </SCRIPT>");
     } else {
       $stmt = $con->prepare("INSERT INTO personal_info (`email`,`Fname`,`Lname`,`Gender`,`Birthdate`,`city`,`street`,`hn`) VALUES (?,?,?,?,?,?,?,?)");
@@ -65,10 +61,8 @@ where `pet_id` = (SELECT  `pet_id`
 					ORDER BY `pet_id` DESC LIMIT 1)");
 
       echo ("<SCRIPT LANGUAGE='JavaScript'>
-          swal({
-            title: 'Registration Successfully!.',
-            icon: 'error',
-          })
+      window.alert('Registration Successfully!.')
+      window.location.href='Login.php'
 </SCRIPT>");
 
       $stmt->close();
@@ -77,7 +71,6 @@ where `pet_id` = (SELECT  `pet_id`
   }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,6 +82,8 @@ where `pet_id` = (SELECT  `pet_id`
   <link rel="icon" href="img/smallLogo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/signUp.css" />
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 
 <body>
